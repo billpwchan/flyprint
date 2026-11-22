@@ -1,0 +1,31 @@
+航迹（Flyprint）素材与第三方归属
+
+源代码按 LICENSE 中的 MIT 许可分发。航司名称与标识仅用于飞行档案中的运营商识别，属于各自权利人的商标；不因代码的 MIT 许可获得授权，也不表示相关航司认可、合作或背书。重新分发或商业使用时应单独核实这些素材的适用范围。
+
+地图几何来自 world-atlas 分发的 Natural Earth 数据：地球底图使用 1:10m 陆地与国界，年度卡片使用 1:50m 陆地。Natural Earth 地理数据为公共领域；world-atlas 软件包另有自己的许可与归属文件。国家名称在构建时由 Intl.DisplayNames 写成固定的三语表。
+Natural Earth: https://www.naturalearthdata.com/about/terms-of-use/
+world-atlas: https://github.com/topojson/world-atlas
+
+机场标识、海拔、城市与跑道参考几何由公共领域的 OurAirports 数据生成；城市页的跑道图用的是其中每条跑道两端的坐标与宽度。
+OurAirports: https://ourairports.com/data/
+
+机型侧视图由本项目绘制：轮廓按公开的比例三视图实测，再按制造商公布的尺寸归一。飞机照片来自 Planespotters.net 的公开接口，版权属于各自的摄影师；页面直接引用其图片，并署名、链接到原照片页。
+Planespotters: https://www.planespotters.net/
+
+航司与机场的中文名称来自 Wikidata 标签（CC0），再按香港用字转成繁体（OpenCC，Apache-2.0），常见航司与城市另经人工校对；航司代码与英文名来自 Travelpayouts 公开数据。航司标识优先采用 Soaring Symbols 收录的矢量图（其目录数据为 MIT 许可；标识本身不在任何许可之内），其余取自 KAYAK 与 Google Flights 公开的航司图标，统一裁边、居中、提亮深色笔画后存为 public/airlines/*.webp。所有标识均为各航司的商标或作品，仅用于识别所乘航司；权利人要求移除时，从生成结果中删去即可。生成方式见 scripts/build-airlines.mjs 与 scripts/build-places.mjs。
+Wikidata: https://www.wikidata.org/wiki/Wikidata:Licensing
+Soaring Symbols: https://github.com/anhthang/soaring-symbols
+OpenCC: https://github.com/BYVoid/OpenCC
+
+导入时使用的机场位置、所在国家与 IANA 时区由 mwgg/Airports 生成（MIT 许可，Copyright (c) mwgg）。
+mwgg/Airports: https://github.com/mwgg/Airports
+
+网页地球的昼夜照片来自 NASA：白天是 Blue Marble Next Generation（12 月，含地形与海底地形），夜晚是 Black Marble 2016，均为公共领域；public/earth/*.webp 由 scripts/build-web-earth.sh 缩放生成。
+NASA Visible Earth: https://visibleearth.nasa.gov/collection/1484/blue-marble
+
+程序不附带城市卫星图：服务器运行时向 EOX 取 Sentinel-2 cloudless 2024 的瓦片拼成（含经修改的 Copernicus Sentinel 2024 数据），按 CC BY-NC-SA 4.0 授权，只允许非商业使用，页面底部署名。商业部署须把 FLYPRINT_IMAGERY_UPSTREAM 换成自己有权使用的影像源，或取得 EOX 的商业许可。
+Sentinel-2 cloudless: https://s2maps.eu
+
+地球由 BSD-3-Clause 许可的 MapLibre GL JS 渲染。年度卡片在浏览器本地用 Canvas 绘制。依赖各自的许可不因本项目的 MIT 许可而改变。
+
+README 截图与封面航线使用合成示例；航班号、日期、机型组合不表示实际执飞事实。docs/assets 中拍到城市卫星图的截图（目前是 overview、overview-en、years、trip-en 与 mobile）不在 MIT 许可之内，按 CC BY-NC-SA 4.0 授权：Sentinel-2 cloudless 2024 © EOX IT Services GmbH（含经修改的 Copernicus Sentinel 2024 数据）。矢量封面使用相同的公开地图数据与项目 W 路径标记。

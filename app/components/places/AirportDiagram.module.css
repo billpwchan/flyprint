@@ -1,0 +1,29 @@
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.runway {
+  stroke: rgba(228, 236, 247, 0.84);
+  stroke-linecap: butt;
+}
+
+.end {
+  fill: var(--ink-3);
+  font-family: var(--mono);
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.scale path {
+  fill: none;
+  stroke: var(--ink-3);
+}
+
+.scale text {
+  fill: var(--ink-3);
+  font-family: var(--mono);
+  text-anchor: middle;
+}

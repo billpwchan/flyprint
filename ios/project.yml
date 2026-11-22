@@ -1,0 +1,83 @@
+name: Flyprint
+options:
+  bundleIdPrefix: art.billpwchan
+  deploymentTarget:
+    iOS: "26.0"
+  developmentLanguage: zh-Hans
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+targets:
+  Flyprint:
+    type: application
+    platform: iOS
+    sources:
+      - path: Flyprint
+      - path: ../public/airlines
+        type: folder
+        buildPhase: resources
+    info:
+      path: Flyprint/Info.plist
+      properties:
+        CFBundleDisplayName: 航迹
+        CFBundleLocalizations: [zh-Hans, zh-Hant, en]
+        CFBundleDevelopmentRegion: zh-Hans
+        UILaunchScreen:
+          UIColorName: Space
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIUserInterfaceStyle: Dark
+        ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: 扫登机牌上的条码，把航班填进来。
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: art.billpwchan.flyprint
+        PRODUCT_NAME: Flyprint
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        TARGETED_DEVICE_FAMILY: "1,2"
+        MTL_FAST_MATH: YES
+  FlyprintTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [FlyprintTests]
+    dependencies:
+      - target: Flyprint
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: art.billpwchan.flyprint.tests
+  FlyprintUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [FlyprintUITests]
+    dependencies:
+      - target: Flyprint
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: art.billpwchan.flyprint.uitests
+        TEST_TARGET_NAME: Flyprint
+        SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+schemes:
+  Flyprint:
+    build:
+      targets:
+        Flyprint: all
+        FlyprintTests: [test]
+        FlyprintUITests: [test]
+    test:
+      targets: [FlyprintTests, FlyprintUITests]

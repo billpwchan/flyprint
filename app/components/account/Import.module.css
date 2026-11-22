@@ -1,0 +1,432 @@
+/* The import screen: a drop target that is the whole panel, a reading
+   readout, and a list of what was found, each row editable in place. */
+
+.formats {
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.format {
+  display: grid;
+  grid-template-columns: 7.5em minmax(0, 1fr);
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.format b {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.format span {
+  color: var(--ink-3);
+}
+
+.start {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 22px;
+  margin-top: 28px;
+}
+
+.picked {
+  display: grid;
+  gap: 2px;
+  margin-top: 22px;
+}
+
+.file {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.file strong {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file span {
+  flex: none;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.file[data-error="true"] span {
+  color: #f0b07a;
+}
+
+.file button {
+  flex: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.file button:hover {
+  color: var(--ink);
+}
+
+/* The whole panel takes a drop; while a drag is over the window it says so. */
+
+.dropping {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 6, 8, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(135, 174, 221, 0.45), inset 0 0 120px rgba(135, 174, 221, 0.16);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+  pointer-events: none;
+  animation: appear 160ms var(--ease) both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Reading: a figure for where it is, a line of light running under it. */
+
+.reading {
+  margin-top: 28px;
+}
+
+.stage {
+  font-size: 15px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.track {
+  position: relative;
+  height: 2px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.track i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 1px;
+  background: var(--b);
+  box-shadow: 0 0 10px var(--b);
+  transition: width 600ms var(--ease);
+}
+
+.track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  animation: sweep 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(340%);
+  }
+}
+
+/* Review */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.toolbar button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-2);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  color: var(--ink);
+}
+
+.rows {
+  display: grid;
+  gap: 2px;
+  margin: 10px calc(var(--gutter) * -0.5) 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 10px;
+  padding: 11px calc(var(--gutter) * 0.5);
+  border-radius: 12px;
+  transition: background-color 140ms var(--ease), opacity 160ms var(--ease);
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.row[data-included="false"] {
+  opacity: 0.5;
+}
+
+.row[data-included="false"]:hover {
+  opacity: 0.8;
+}
+
+.row[data-open="true"] {
+  background: rgba(255, 255, 255, 0.045);
+  opacity: 1;
+}
+
+/* A round mark, filled when the flight will be saved. */
+.check {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--ink-4);
+  cursor: pointer;
+  transition: background-color 160ms var(--ease), box-shadow 160ms var(--ease);
+}
+
+.check[aria-checked="true"] {
+  background: var(--b);
+  box-shadow: 0 0 12px rgba(135, 174, 221, 0.55);
+}
+
+.check[aria-checked="true"]::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 9px;
+  border: solid #07080b;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.check:disabled {
+  cursor: default;
+  box-shadow: inset 0 0 0 1.5px rgba(240, 176, 122, 0.6);
+}
+
+.main {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.code {
+  flex: none;
+  font: 600 13px/1.4 var(--mono);
+  letter-spacing: 0.02em;
+}
+
+.route {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.route small {
+  margin-left: 4px;
+  font: 500 11px/1 var(--mono);
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+
+.route em {
+  font-style: normal;
+  color: #f0b07a;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.tag {
+  color: var(--ink-2);
+}
+
+.tag[data-tone="warn"] {
+  color: #f0b07a;
+}
+
+.tag[data-tone="muted"] {
+  color: var(--ink-3);
+}
+
+.changes {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.problems {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #f0b07a;
+}
+
+.editor {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+  margin-top: 10px;
+}
+
+.editor label {
+  display: grid;
+  gap: 4px;
+}
+
+.editor label > span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-3);
+}
+
+.editor input,
+.editor select {
+  width: 100%;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: inset 0 -1px 0 var(--line-strong);
+  color: var(--ink);
+  font: 400 15px/1.3 var(--font);
+  outline: none;
+  color-scheme: dark;
+}
+
+.editor input:focus,
+.editor select:focus {
+  box-shadow: inset 0 -1.5px 0 var(--b);
+}
+
+.editor input[data-code] {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.editor input[aria-invalid="true"] {
+  box-shadow: inset 0 -1.5px 0 #f0b07a;
+}
+
+.editor select option {
+  background: #111317;
+}
+
+.editorActions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 18px;
+}
+
+/* The save bar rides the bottom of the list. */
+
+.bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  margin: 18px calc(var(--gutter) * -1) 0;
+  padding: 26px var(--gutter) 22px;
+  background: linear-gradient(rgba(7, 8, 11, 0), var(--panel-solid) 34%);
+}
+
+.sources {
+  margin-top: 34px;
+}
+
+.done {
+  margin-top: 28px;
+}
+
+.done .start {
+  margin-top: 22px;
+}
+
+@media (max-width: 760px) {
+  .format {
+    grid-template-columns: 6.5em minmax(0, 1fr);
+  }
+
+  .bar {
+    padding-bottom: calc(18px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track::after {
+    animation: none;
+  }
+}
+
+.manual {
+  margin-top: 22px;
+  padding-top: 18px;
+  box-shadow: inset 0 1px 0 var(--line);
+}

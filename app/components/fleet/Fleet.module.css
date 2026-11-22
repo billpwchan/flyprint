@@ -1,0 +1,215 @@
+/* The fleet: types drawn to one scale, airlines by their marks, airframes as photographs. */
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sectionHead > span {
+  font-size: 11px;
+  color: var(--ink-4);
+}
+
+.lineup {
+  display: grid;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.type {
+  display: grid;
+  gap: 8px;
+  width: calc(100% + 24px);
+  margin: 0 -12px;
+  padding: 14px 12px 10px;
+  border-radius: 10px;
+  transition: background-color 160ms var(--ease);
+}
+
+.type:hover {
+  background: var(--fill);
+}
+
+.typeLine {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+
+.typeLine strong {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.typeLine small {
+  font-size: 13px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.typeLine strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.typeLine > span {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Rows with a share bar: airlines, routes. */
+
+.bars li + li {
+  box-shadow: inset 0 1px 0 var(--line);
+}
+
+.carrier,
+.route {
+  display: grid;
+  align-items: center;
+  gap: 12px;
+  width: calc(100% + 24px);
+  margin: 0 -12px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  transition: background-color 160ms var(--ease);
+}
+
+.carrier {
+  grid-template-columns: 24px minmax(0, 1fr) minmax(2.5em, 28%) 2.5em;
+}
+
+.route {
+  grid-template-columns: minmax(0, 1fr) minmax(2.5em, 28%) 2.5em;
+}
+
+.carrier:hover,
+.route:hover {
+  background: var(--fill);
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.track {
+  height: 6px;
+}
+
+.track i {
+  display: block;
+  min-width: 3px;
+  height: 100%;
+  border-radius: 1px;
+  background: var(--ink-4);
+  transition: background-color 160ms var(--ease);
+}
+
+.carrier:hover .track i,
+.route:hover .track i {
+  background: var(--ink-2);
+}
+
+.count {
+  text-align: right;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Airframes two across. */
+
+.tails {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 12px;
+  margin-top: 6px;
+}
+
+.tailLine {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+  transition: color 160ms var(--ease);
+}
+
+.tailLine strong {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.tailLine span {
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.tailLine:hover strong {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-4);
+  text-underline-offset: 3px;
+}
+
+.more,
+.all {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  font-size: 13px;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 160ms var(--ease);
+}
+
+.more:hover,
+.all:hover {
+  color: var(--ink);
+}
+
+.all {
+  margin-top: 22px;
+}
+
+/* A type's or airline's own page. */
+
+.hero {
+  margin: 6px 0 18px;
+}
+
+.maker {
+  margin-bottom: 2px !important;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.code {
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}

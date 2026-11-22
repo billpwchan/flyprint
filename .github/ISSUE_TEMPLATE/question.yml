@@ -1,0 +1,33 @@
+name: 使用求助
+description: 安装、数据准备或自托管时遇到问题。
+title: "[Question] "
+body:
+  - type: markdown
+    attributes:
+      value: 先阅读 docs/GETTING_STARTED.md。不要贴真实档案、域名凭证或私人文件路径。
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你想完成什么？
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境与执行命令
+      description: 操作系统、Node/npm 版本、提交版本，以及相关命令。
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 脱敏错误与已尝试的方法
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前检查
+      options:
+        - label: 我已阅读启动与排错文档，并清除了隐私与凭证。
+          required: true

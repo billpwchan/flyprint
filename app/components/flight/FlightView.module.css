@@ -1,0 +1,283 @@
+.header {
+  padding-top: 0;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.identity h1 {
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.identity p {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.when {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.when span + span {
+  color: var(--ink-3);
+}
+
+.board {
+  margin-top: 24px;
+  padding: 18px 0 26px;
+}
+
+.sky {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--ink-3);
+  text-align: center;
+}
+
+.carrierLink {
+  transition: color 160ms var(--ease);
+}
+
+.carrierLink:hover {
+  color: var(--ink);
+}
+
+/* The aircraft: its type drawn to scale, then the airframe photographed. */
+.aircraft {
+  padding: 4px 0 22px;
+}
+
+.drawing {
+  display: block;
+  margin: 10px 0 14px;
+  border-radius: 8px;
+}
+
+.typeLine {
+  display: grid;
+  gap: 3px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+.tail {
+  display: grid;
+  grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+  align-items: start;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.tailText {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding-top: 2px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+.tailText strong {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+}
+
+.dates .inline {
+  margin-left: 0;
+}
+
+/* Facts as a two-column ledger: label, then what the archive knows. */
+.facts > div {
+  display: grid;
+  grid-template-columns: 6.5em minmax(0, 1fr);
+  gap: 16px;
+  padding: 13px 0;
+}
+
+.facts dt {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
+
+.facts dd {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+.people {
+  font-size: 15px;
+  justify-items: start;
+}
+
+.people a {
+  color: var(--ink);
+}
+
+.primary,
+.primaryLink {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.primaryLink {
+  justify-self: start;
+  transition: color 160ms var(--ease);
+}
+
+.primaryLink:hover {
+  color: var(--ink-2);
+}
+
+.registration {
+  margin-left: 10px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.inline {
+  margin-left: 10px;
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+  transition: color 160ms var(--ease);
+}
+
+.inline:hover {
+  color: var(--ink);
+}
+
+.muted {
+  color: var(--ink-3);
+}
+
+.provenance {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--ink-4);
+}
+
+@media (max-width: 760px) {
+  .identity h1 {
+    font-size: 26px;
+  }
+
+  .facts > div {
+    grid-template-columns: 5em minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.remove {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-top: 28px;
+  font-size: 12px;
+  color: var(--ink-4);
+}
+
+.remove button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 140ms var(--ease);
+}
+
+.remove button:hover,
+.remove button[data-armed] {
+  color: #f0a58a;
+}
+
+.remove .editButton:hover {
+  color: var(--ink);
+}
+
+.editing {
+  margin-top: 30px;
+  padding-top: 22px;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+
+.editTitle {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* The trip this flight belongs to, its destination from above, as in the app. */
+.tripLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-self: start;
+  max-width: 100%;
+  margin: -6px -8px;
+  padding: 6px 8px;
+  border-radius: 14px;
+  transition: background-color 140ms var(--ease);
+}
+
+.tripLink:hover {
+  background: var(--fill);
+}
+
+.tripImage {
+  width: 44px;
+  height: 44px;
+}
+
+.tripLink > span {
+  display: grid;
+  min-width: 0;
+}
+
+.tripLink b {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tripLink small {
+  font-size: 13px;
+  color: var(--ink-3);
+}

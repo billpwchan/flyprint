@@ -1,0 +1,203 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  isolation: isolate;
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 700ms var(--ease);
+}
+
+.stage[data-ready="true"] .map {
+  opacity: 1;
+}
+
+.map :global(.maplibregl-canvas) {
+  outline: none;
+}
+
+.labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* A flight in the air, where it is now on its arc. */
+.aircraft {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18), 0 0 14px rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 240ms var(--ease);
+  will-change: transform;
+}
+
+.aircraft[data-visible="true"] {
+  opacity: 1;
+}
+
+.aircraft::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  animation: ping 2.4s var(--ease) infinite;
+}
+
+@keyframes ping {
+  from { transform: scale(1); opacity: 0.9; }
+  to { transform: scale(3.2); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aircraft::after { animation: none; }
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  height: 18px;
+  white-space: nowrap;
+  font-size: 11px;
+  line-height: 18px;
+  color: var(--ink);
+  text-shadow: 0 0 2px var(--bg), 0 0 6px var(--bg), 0 0 10px var(--bg);
+  opacity: 0;
+  transition: opacity 160ms var(--ease);
+  will-change: transform;
+}
+
+.label b {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.label i {
+  font-style: normal;
+  font-size: 11px;
+  color: var(--ink-2);
+  display: none;
+}
+
+.label[data-wide="true"] i {
+  display: inline;
+}
+
+.label[data-visible="true"] {
+  opacity: 1;
+}
+
+.label[data-visible="true"][data-muted="true"] {
+  opacity: 0.45;
+}
+
+.controls {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity 300ms var(--ease);
+}
+
+.stage[data-ready="true"] .controls {
+  opacity: 1;
+}
+
+.controls button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 160ms var(--ease), background-color 160ms var(--ease);
+}
+
+.controls button:hover {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.controls button:active svg {
+  transform: scale(0.92);
+}
+
+.controls svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.75;
+  transition: transform 120ms var(--ease);
+}
+
+.notice {
+  position: absolute;
+  inset: auto 0 50%;
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .controls {
+    display: none;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(10, 12, 15, 0.92);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: var(--ink);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms var(--ease);
+}
+
+.tooltip[data-visible="true"] {
+  opacity: 1;
+}
+
+.tooltip b {
+  font-family: var(--mono);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tooltip span {
+  color: var(--ink-3);
+}

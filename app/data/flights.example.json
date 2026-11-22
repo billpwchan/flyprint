@@ -1,0 +1,9090 @@
+{
+ "generatedFrom": "synthetic-demo",
+ "anchor": "2026-11-19",
+ "seed": 20261119,
+ "travellers": [
+  {
+   "id": "B",
+   "label": "Lin",
+   "accent": "cyan"
+  },
+  {
+   "id": "Z",
+   "label": "Theo",
+   "accent": "violet"
+  }
+ ],
+ "airports": {
+  "AMS": {
+   "name": "阿姆斯特丹史基浦",
+   "code": "AMS",
+   "city": "阿姆斯特丹",
+   "country": "荷兰",
+   "coordinates": [
+    4.76389,
+    52.3086
+   ]
+  },
+  "ATH": {
+   "name": "雅典埃莱夫塞里奥斯·韦尼泽洛斯国际机场",
+   "code": "ATH",
+   "city": "雅典",
+   "country": "希腊",
+   "coordinates": [
+    23.9445,
+    37.9364
+   ]
+  },
+  "BCN": {
+   "name": "巴塞罗那埃尔普拉特",
+   "code": "BCN",
+   "city": "巴塞罗那",
+   "country": "西班牙",
+   "coordinates": [
+    2.07846,
+    41.2971
+   ]
+  },
+  "BER": {
+   "name": "柏林勃兰登堡机场",
+   "code": "BER",
+   "city": "柏林",
+   "country": "德国",
+   "coordinates": [
+    13.50333,
+    52.36667
+   ]
+  },
+  "BKK": {
+   "name": "曼谷素万那普国际",
+   "code": "BKK",
+   "city": "曼谷",
+   "country": "泰国",
+   "coordinates": [
+    100.747,
+    13.6811
+   ]
+  },
+  "CJU": {
+   "name": "济州国际机场",
+   "code": "CJU",
+   "city": "济州岛",
+   "country": "韩国",
+   "coordinates": [
+    126.493,
+    33.5113
+   ]
+  },
+  "CNX": {
+   "name": "清迈国际机场",
+   "code": "CNX",
+   "city": "清迈",
+   "country": "泰国",
+   "coordinates": [
+    98.9626,
+    18.7668
+   ]
+  },
+  "CPH": {
+   "name": "哥本哈根凯斯楚普",
+   "code": "CPH",
+   "city": "哥本哈根",
+   "country": "丹麦",
+   "coordinates": [
+    12.656,
+    55.6179
+   ]
+  },
+  "CPT": {
+   "name": "开普敦国际机场",
+   "code": "CPT",
+   "city": "开普敦",
+   "country": "南非",
+   "coordinates": [
+    18.6017,
+    -33.9648
+   ]
+  },
+  "CTU": {
+   "name": "成都双流",
+   "code": "CTU",
+   "city": "成都",
+   "country": "中国",
+   "coordinates": [
+    103.947,
+    30.5785
+   ]
+  },
+  "DAD": {
+   "name": "岘港国际机场",
+   "code": "DAD",
+   "city": "岘港",
+   "country": "越南",
+   "coordinates": [
+    108.199,
+    16.0439
+   ]
+  },
+  "DPS": {
+   "name": "巴厘岛努拉莱伊",
+   "code": "DPS",
+   "city": "巴厘岛",
+   "country": "印度尼西亚",
+   "coordinates": [
+    115.167,
+    -8.74817
+   ]
+  },
+  "DUB": {
+   "name": "都柏林机场",
+   "code": "DUB",
+   "city": "都柏林",
+   "country": "爱尔兰",
+   "coordinates": [
+    -6.27007,
+    53.4213
+   ]
+  },
+  "DXB": {
+   "name": "迪拜国际",
+   "code": "DXB",
+   "city": "迪拜",
+   "country": "阿联酋",
+   "coordinates": [
+    55.3644,
+    25.2528
+   ]
+  },
+  "EDI": {
+   "name": "爱丁堡机场",
+   "code": "EDI",
+   "city": "爱丁堡",
+   "country": "英国",
+   "coordinates": [
+    -3.3725,
+    55.95
+   ]
+  },
+  "HAN": {
+   "name": "内排国际机场",
+   "code": "HAN",
+   "city": "河内",
+   "country": "越南",
+   "coordinates": [
+    105.807,
+    21.2212
+   ]
+  },
+  "HKG": {
+   "name": "香港国际",
+   "code": "HKG",
+   "city": "香港",
+   "country": "香港",
+   "coordinates": [
+    113.915,
+    22.3089
+   ]
+  },
+  "HKT": {
+   "name": "普吉国际",
+   "code": "HKT",
+   "city": "普吉",
+   "country": "泰国",
+   "coordinates": [
+    98.3169,
+    8.1132
+   ]
+  },
+  "HND": {
+   "name": "东京国际机场",
+   "code": "HND",
+   "city": "东京",
+   "country": "日本",
+   "coordinates": [
+    139.78,
+    35.5523
+   ]
+  },
+  "HNL": {
+   "name": "丹尼尔·K·井上国际机场",
+   "code": "HNL",
+   "city": "火奴鲁鲁",
+   "country": "美国",
+   "coordinates": [
+    -157.922,
+    21.3187
+   ]
+  },
+  "ICN": {
+   "name": "首尔仁川国际",
+   "code": "ICN",
+   "city": "首尔",
+   "country": "韩国",
+   "coordinates": [
+    126.451,
+    37.4691
+   ]
+  },
+  "JFK": {
+   "name": "约翰·F·肯尼迪国际机场",
+   "code": "JFK",
+   "city": "纽约",
+   "country": "美国",
+   "coordinates": [
+    -73.7789,
+    40.6398
+   ]
+  },
+  "JTR": {
+   "name": "圣托里尼机场",
+   "code": "JTR",
+   "city": "圣托里尼",
+   "country": "希腊",
+   "coordinates": [
+    25.4793,
+    36.3992
+   ]
+  },
+  "KEF": {
+   "name": "凯夫拉维克国际机场",
+   "code": "KEF",
+   "city": "雷克雅未克",
+   "country": "冰岛",
+   "coordinates": [
+    -22.6056,
+    63.985
+   ]
+  },
+  "KIX": {
+   "name": "大阪关西",
+   "code": "KIX",
+   "city": "大阪",
+   "country": "日本",
+   "coordinates": [
+    135.244,
+    34.4273
+   ]
+  },
+  "KMG": {
+   "name": "昆明长水",
+   "code": "KMG",
+   "city": "昆明",
+   "country": "中国",
+   "coordinates": [
+    102.744,
+    24.9924
+   ]
+  },
+  "KWL": {
+   "name": "桂林两江国际机场",
+   "code": "KWL",
+   "city": "桂林",
+   "country": "中国",
+   "coordinates": [
+    110.039,
+    25.2181
+   ]
+  },
+  "LHR": {
+   "name": "伦敦希思罗",
+   "code": "LHR",
+   "city": "伦敦",
+   "country": "英国",
+   "coordinates": [
+    -0.46194,
+    51.4706
+   ]
+  },
+  "LIS": {
+   "name": "里斯本机场",
+   "code": "LIS",
+   "city": "里斯本",
+   "country": "葡萄牙",
+   "coordinates": [
+    -9.13592,
+    38.7813
+   ]
+  },
+  "LJG": {
+   "name": "丽江三义机场",
+   "code": "LJG",
+   "city": "丽江",
+   "country": "中国",
+   "coordinates": [
+    100.246,
+    26.68
+   ]
+  },
+  "MLE": {
+   "name": "维拉纳国际机场",
+   "code": "MLE",
+   "city": "马尔代夫",
+   "country": "马尔代夫",
+   "coordinates": [
+    73.5291,
+    4.19183
+   ]
+  },
+  "MUC": {
+   "name": "慕尼黑",
+   "code": "MUC",
+   "city": "慕尼黑",
+   "country": "德国",
+   "coordinates": [
+    11.7861,
+    48.3538
+   ]
+  },
+  "NCE": {
+   "name": "尼斯蔚蓝海岸机场",
+   "code": "NCE",
+   "city": "尼斯",
+   "country": "法国",
+   "coordinates": [
+    7.21587,
+    43.6584
+   ]
+  },
+  "NRT": {
+   "name": "东京成田",
+   "code": "NRT",
+   "city": "东京",
+   "country": "日本",
+   "coordinates": [
+    140.386,
+    35.7647
+   ]
+  },
+  "OPO": {
+   "name": "费尔南多·萨·卡内罗机场",
+   "code": "OPO",
+   "city": "波尔图",
+   "country": "葡萄牙",
+   "coordinates": [
+    -8.68139,
+    41.2481
+   ]
+  },
+  "PEK": {
+   "name": "北京首都",
+   "code": "PEK",
+   "city": "北京",
+   "country": "中国",
+   "coordinates": [
+    116.585,
+    40.0801
+   ]
+  },
+  "PRG": {
+   "name": "布拉格鲁济涅国际机场",
+   "code": "PRG",
+   "city": "布拉格",
+   "country": "捷克",
+   "coordinates": [
+    14.26,
+    50.1008
+   ]
+  },
+  "PVG": {
+   "name": "上海浦东",
+   "code": "PVG",
+   "city": "上海",
+   "country": "中国",
+   "coordinates": [
+    121.805,
+    31.1434
+   ]
+  },
+  "RAK": {
+   "name": "马拉喀什－迈纳拉国际机场",
+   "code": "RAK",
+   "city": "马拉喀什",
+   "country": "摩洛哥",
+   "coordinates": [
+    -8.0363,
+    31.6069
+   ]
+  },
+  "SFO": {
+   "name": "旧金山国际机场",
+   "code": "SFO",
+   "city": "旧金山",
+   "country": "美国",
+   "coordinates": [
+    -122.375,
+    37.619
+   ]
+  },
+  "SGN": {
+   "name": "新山一国际机场",
+   "code": "SGN",
+   "city": "胡志明市",
+   "country": "越南",
+   "coordinates": [
+    106.652,
+    10.8188
+   ]
+  },
+  "SHA": {
+   "name": "上海虹桥",
+   "code": "SHA",
+   "city": "上海",
+   "country": "中国",
+   "coordinates": [
+    121.336,
+    31.1979
+   ]
+  },
+  "SIN": {
+   "name": "新加坡樟宜",
+   "code": "SIN",
+   "city": "新加坡",
+   "country": "新加坡",
+   "coordinates": [
+    103.994,
+    1.35019
+   ]
+  },
+  "SYX": {
+   "name": "三亚凤凰国际机场",
+   "code": "SYX",
+   "city": "三亚",
+   "country": "中国",
+   "coordinates": [
+    109.412,
+    18.3029
+   ]
+  },
+  "SZX": {
+   "name": "深圳宝安",
+   "code": "SZX",
+   "city": "深圳",
+   "country": "中国",
+   "coordinates": [
+    113.811,
+    22.6393
+   ]
+  },
+  "VIE": {
+   "name": "维也纳国际机场",
+   "code": "VIE",
+   "city": "维也纳",
+   "country": "奥地利",
+   "coordinates": [
+    16.5697,
+    48.1103
+   ]
+  },
+  "XIY": {
+   "name": "西安咸阳",
+   "code": "XIY",
+   "city": "西安",
+   "country": "中国",
+   "coordinates": [
+    108.752,
+    34.4471
+   ]
+  }
+ },
+ "flights": [
+  {
+   "id": "DEMO-001",
+   "date": "2017-03-16",
+   "year": 2017,
+   "airline": "MU",
+   "flight": "MU5101",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "08:00",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-002",
+   "date": "2017-03-18",
+   "year": 2017,
+   "airline": "MU",
+   "flight": "MU5138",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "18:00",
+   "arrive": "20:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-003",
+   "date": "2017-05-07",
+   "year": 2017,
+   "airline": "7C",
+   "flight": "7C8802",
+   "origin": "PVG",
+   "destination": "CJU",
+   "depart": "16:10",
+   "arrive": "18:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 100,
+   "timeSource": "historical_schedule",
+   "km": 513,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-004",
+   "date": "2017-05-10",
+   "year": 2017,
+   "airline": "7C",
+   "flight": "7C8801",
+   "origin": "CJU",
+   "destination": "PVG",
+   "depart": "12:30",
+   "arrive": "13:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 110,
+   "timeSource": "historical_schedule",
+   "km": 513,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-005",
+   "date": "2017-05-11",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-006",
+   "date": "2017-05-13",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-007",
+   "date": "2017-05-31",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-008",
+   "date": "2017-06-03",
+   "year": 2017,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-009",
+   "date": "2017-06-14",
+   "year": 2017,
+   "airline": "TG",
+   "flight": "TG665",
+   "origin": "PVG",
+   "destination": "BKK",
+   "depart": "16:05",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 285,
+   "timeSource": "historical_schedule",
+   "km": 2897,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-010",
+   "date": "2017-06-17",
+   "year": 2017,
+   "airline": "FD",
+   "flight": "FD3437",
+   "origin": "BKK",
+   "destination": "CNX",
+   "depart": "10:15",
+   "arrive": "11:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 597,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-011",
+   "date": "2017-06-20",
+   "year": 2017,
+   "airline": "FD",
+   "flight": "FD3438",
+   "origin": "CNX",
+   "destination": "BKK",
+   "depart": "13:05",
+   "arrive": "14:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 597,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-012",
+   "date": "2017-06-20",
+   "year": 2017,
+   "airline": "TG",
+   "flight": "TG662",
+   "origin": "BKK",
+   "destination": "PVG",
+   "depart": "16:55",
+   "arrive": "22:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 245,
+   "timeSource": "historical_schedule",
+   "km": 2897,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-013",
+   "date": "2017-07-03",
+   "year": 2017,
+   "airline": "OZ",
+   "flight": "OZ362",
+   "origin": "PVG",
+   "destination": "ICN",
+   "depart": "12:45",
+   "arrive": "15:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 115,
+   "timeSource": "historical_schedule",
+   "km": 822,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-014",
+   "date": "2017-07-06",
+   "year": 2017,
+   "airline": "KE",
+   "flight": "KE893",
+   "origin": "ICN",
+   "destination": "PVG",
+   "depart": "09:00",
+   "arrive": "10:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 822,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-015",
+   "date": "2017-07-13",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-016",
+   "date": "2017-07-15",
+   "year": 2017,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-017",
+   "date": "2017-08-18",
+   "year": 2017,
+   "airline": "CX",
+   "flight": "CX369",
+   "origin": "PVG",
+   "destination": "HKG",
+   "depart": "10:20",
+   "arrive": "13:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1256,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-018",
+   "date": "2017-08-21",
+   "year": 2017,
+   "airline": "CX",
+   "flight": "CX366",
+   "origin": "HKG",
+   "destination": "PVG",
+   "depart": "13:45",
+   "arrive": "16:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 155,
+   "timeSource": "historical_schedule",
+   "km": 1256,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-019",
+   "date": "2017-09-18",
+   "year": 2017,
+   "airline": "MU",
+   "flight": "MU5405",
+   "origin": "SHA",
+   "destination": "CTU",
+   "depart": "10:00",
+   "arrive": "13:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1659,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-020",
+   "date": "2017-09-22",
+   "year": 2017,
+   "airline": "MU",
+   "flight": "MU5406",
+   "origin": "CTU",
+   "destination": "SHA",
+   "depart": "15:30",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1659,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-021",
+   "date": "2017-10-05",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL641",
+   "origin": "AMS",
+   "destination": "JFK",
+   "depart": "10:40",
+   "arrive": "13:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 505,
+   "timeSource": "historical_schedule",
+   "km": 5848,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-022",
+   "date": "2017-10-11",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL642",
+   "origin": "JFK",
+   "destination": "AMS",
+   "depart": "17:55",
+   "arrive": "07:20",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 445,
+   "timeSource": "historical_schedule",
+   "km": 5848,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-023",
+   "date": "2017-10-29",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-024",
+   "date": "2017-10-30",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-025",
+   "date": "2017-11-23",
+   "year": 2017,
+   "airline": "VN",
+   "flight": "VN531",
+   "origin": "PVG",
+   "destination": "HAN",
+   "depart": "19:40",
+   "arrive": "22:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1937,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-026",
+   "date": "2017-11-26",
+   "year": 2017,
+   "airline": "VN",
+   "flight": "VN159",
+   "origin": "HAN",
+   "destination": "DAD",
+   "depart": "08:00",
+   "arrive": "09:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 628,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-027",
+   "date": "2017-11-29",
+   "year": 2017,
+   "airline": "VJ",
+   "flight": "VJ621",
+   "origin": "DAD",
+   "destination": "SGN",
+   "depart": "11:30",
+   "arrive": "12:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 605,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-028",
+   "date": "2017-12-02",
+   "year": 2017,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-029",
+   "date": "2017-12-02",
+   "year": 2017,
+   "airline": "VN",
+   "flight": "VN522",
+   "origin": "SGN",
+   "destination": "PVG",
+   "depart": "13:30",
+   "arrive": "18:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 265,
+   "timeSource": "historical_schedule",
+   "km": 2746,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-030",
+   "date": "2017-12-05",
+   "year": 2017,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-031",
+   "date": "2017-12-16",
+   "year": 2017,
+   "airline": "MU",
+   "flight": "MU5802",
+   "origin": "PVG",
+   "destination": "KMG",
+   "depart": "07:30",
+   "arrive": "11:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 225,
+   "timeSource": "historical_schedule",
+   "km": 1988,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-032",
+   "date": "2017-12-17",
+   "year": 2017,
+   "airline": "MU",
+   "flight": "MU5915",
+   "origin": "KMG",
+   "destination": "LJG",
+   "depart": "10:00",
+   "arrive": "11:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 60,
+   "timeSource": "historical_schedule",
+   "km": 313,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-033",
+   "date": "2017-12-20",
+   "year": 2017,
+   "airline": "HO",
+   "flight": "HO1172",
+   "origin": "LJG",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 215,
+   "timeSource": "historical_schedule",
+   "km": 2153,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-034",
+   "date": "2018-01-20",
+   "year": 2018,
+   "airline": "MU",
+   "flight": "MU523",
+   "origin": "PVG",
+   "destination": "NRT",
+   "depart": "09:00",
+   "arrive": "12:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-035",
+   "date": "2018-01-25",
+   "year": 2018,
+   "airline": "JL",
+   "flight": "JL875",
+   "origin": "NRT",
+   "destination": "PVG",
+   "depart": "18:55",
+   "arrive": "21:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-036",
+   "date": "2018-02-02",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-037",
+   "date": "2018-02-05",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-038",
+   "date": "2018-02-13",
+   "year": 2018,
+   "airline": "MU",
+   "flight": "MU5411",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "08:05",
+   "arrive": "11:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-039",
+   "date": "2018-02-21",
+   "year": 2018,
+   "airline": "MU",
+   "flight": "MU5412",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "13:10",
+   "arrive": "16:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 170,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-040",
+   "date": "2018-02-23",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-041",
+   "date": "2018-02-26",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-042",
+   "date": "2018-03-06",
+   "year": 2018,
+   "airline": "MU",
+   "flight": "MU5331",
+   "origin": "SHA",
+   "destination": "SZX",
+   "depart": "08:35",
+   "arrive": "11:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1208,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-043",
+   "date": "2018-03-08",
+   "year": 2018,
+   "airline": "ZH",
+   "flight": "ZH9517",
+   "origin": "SZX",
+   "destination": "SHA",
+   "depart": "15:10",
+   "arrive": "17:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 145,
+   "timeSource": "historical_schedule",
+   "km": 1208,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-044",
+   "date": "2018-03-23",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1665",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "09:10",
+   "arrive": "11:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-045",
+   "date": "2018-03-28",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1670",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "20:15",
+   "arrive": "22:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-046",
+   "date": "2018-03-31",
+   "year": 2018,
+   "airline": "OZ",
+   "flight": "OZ362",
+   "origin": "PVG",
+   "destination": "ICN",
+   "depart": "12:45",
+   "arrive": "15:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 115,
+   "timeSource": "historical_schedule",
+   "km": 822,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-047",
+   "date": "2018-04-05",
+   "year": 2018,
+   "airline": "OZ",
+   "flight": "OZ361",
+   "origin": "ICN",
+   "destination": "PVG",
+   "depart": "09:30",
+   "arrive": "10:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 822,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-048",
+   "date": "2018-04-12",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL897",
+   "origin": "AMS",
+   "destination": "PEK",
+   "depart": "17:35",
+   "arrive": "09:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 570,
+   "timeSource": "historical_schedule",
+   "km": 7827,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-049",
+   "date": "2018-04-19",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL898",
+   "origin": "PEK",
+   "destination": "AMS",
+   "depart": "11:35",
+   "arrive": "16:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 645,
+   "timeSource": "historical_schedule",
+   "km": 7827,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-050",
+   "date": "2018-04-30",
+   "year": 2018,
+   "airline": "7C",
+   "flight": "7C8802",
+   "origin": "PVG",
+   "destination": "CJU",
+   "depart": "16:10",
+   "arrive": "18:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 100,
+   "timeSource": "historical_schedule",
+   "km": 513,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-051",
+   "date": "2018-05-03",
+   "year": 2018,
+   "airline": "7C",
+   "flight": "7C8801",
+   "origin": "CJU",
+   "destination": "PVG",
+   "depart": "12:30",
+   "arrive": "13:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 110,
+   "timeSource": "historical_schedule",
+   "km": 513,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-052",
+   "date": "2018-05-12",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1775",
+   "origin": "AMS",
+   "destination": "BER",
+   "depart": "08:40",
+   "arrive": "09:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 593,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-053",
+   "date": "2018-05-14",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1776",
+   "origin": "BER",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 593,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-054",
+   "date": "2018-06-03",
+   "year": 2018,
+   "airline": "9C",
+   "flight": "9C8807",
+   "origin": "PVG",
+   "destination": "SYX",
+   "depart": "07:00",
+   "arrive": "10:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-055",
+   "date": "2018-06-06",
+   "year": 2018,
+   "airline": "9C",
+   "flight": "9C8808",
+   "origin": "SYX",
+   "destination": "PVG",
+   "depart": "11:35",
+   "arrive": "14:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 185,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-056",
+   "date": "2018-07-08",
+   "year": 2018,
+   "airline": "MU",
+   "flight": "MU729",
+   "origin": "PVG",
+   "destination": "KIX",
+   "depart": "09:05",
+   "arrive": "12:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 150,
+   "timeSource": "historical_schedule",
+   "km": 1307,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-057",
+   "date": "2018-07-13",
+   "year": 2018,
+   "airline": "MU",
+   "flight": "MU524",
+   "origin": "NRT",
+   "destination": "PVG",
+   "depart": "14:30",
+   "arrive": "16:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 195,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-058",
+   "date": "2018-07-20",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL835",
+   "origin": "AMS",
+   "destination": "SIN",
+   "depart": "10:45",
+   "arrive": "05:30",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 765,
+   "timeSource": "historical_schedule",
+   "km": 10514,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-059",
+   "date": "2018-07-21",
+   "year": 2018,
+   "airline": "SQ",
+   "flight": "SQ942",
+   "origin": "SIN",
+   "destination": "DPS",
+   "depart": "09:10",
+   "arrive": "11:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 165,
+   "timeSource": "historical_schedule",
+   "km": 1671,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-060",
+   "date": "2018-08-02",
+   "year": 2018,
+   "airline": "SQ",
+   "flight": "SQ949",
+   "origin": "DPS",
+   "destination": "SIN",
+   "depart": "17:20",
+   "arrive": "20:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1671,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-061",
+   "date": "2018-08-02",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL836",
+   "origin": "SIN",
+   "destination": "AMS",
+   "depart": "23:15",
+   "arrive": "06:40",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 805,
+   "timeSource": "historical_schedule",
+   "km": 10514,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-062",
+   "date": "2018-08-12",
+   "year": 2018,
+   "airline": "9C",
+   "flight": "9C8761",
+   "origin": "PVG",
+   "destination": "KWL",
+   "depart": "10:35",
+   "arrive": "13:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1327,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-063",
+   "date": "2018-08-15",
+   "year": 2018,
+   "airline": "9C",
+   "flight": "9C8762",
+   "origin": "KWL",
+   "destination": "PVG",
+   "depart": "14:50",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 145,
+   "timeSource": "historical_schedule",
+   "km": 1327,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-064",
+   "date": "2018-11-15",
+   "year": 2018,
+   "airline": "TG",
+   "flight": "TG665",
+   "origin": "PVG",
+   "destination": "BKK",
+   "depart": "16:05",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 285,
+   "timeSource": "historical_schedule",
+   "km": 2897,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-065",
+   "date": "2018-11-17",
+   "year": 2018,
+   "airline": "TG",
+   "flight": "TG102",
+   "origin": "BKK",
+   "destination": "CNX",
+   "depart": "08:20",
+   "arrive": "09:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 597,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-066",
+   "date": "2018-11-21",
+   "year": 2018,
+   "airline": "FD",
+   "flight": "FD3438",
+   "origin": "CNX",
+   "destination": "BKK",
+   "depart": "13:05",
+   "arrive": "14:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 597,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-067",
+   "date": "2018-11-21",
+   "year": 2018,
+   "airline": "TG",
+   "flight": "TG662",
+   "origin": "BKK",
+   "destination": "PVG",
+   "depart": "16:55",
+   "arrive": "22:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 245,
+   "timeSource": "historical_schedule",
+   "km": 2897,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-068",
+   "date": "2018-12-23",
+   "year": 2018,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-069",
+   "date": "2018-12-25",
+   "year": 2018,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-070",
+   "date": "2019-01-08",
+   "year": 2019,
+   "airline": "HO",
+   "flight": "HO1155",
+   "origin": "PVG",
+   "destination": "SYX",
+   "depart": "09:20",
+   "arrive": "12:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-071",
+   "date": "2019-01-12",
+   "year": 2019,
+   "airline": "HO",
+   "flight": "HO1156",
+   "origin": "SYX",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "16:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 190,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-072",
+   "date": "2019-01-16",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-073",
+   "date": "2019-01-18",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-074",
+   "date": "2019-02-02",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU5405",
+   "origin": "SHA",
+   "destination": "CTU",
+   "depart": "10:00",
+   "arrive": "13:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1659,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-075",
+   "date": "2019-02-08",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL875",
+   "origin": "AMS",
+   "destination": "BKK",
+   "depart": "17:30",
+   "arrive": "10:25",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 655,
+   "timeSource": "historical_schedule",
+   "km": 9208,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-076",
+   "date": "2019-02-09",
+   "year": 2019,
+   "airline": "TG",
+   "flight": "TG205",
+   "origin": "BKK",
+   "destination": "HKT",
+   "depart": "14:00",
+   "arrive": "15:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 674,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-077",
+   "date": "2019-02-09",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU5406",
+   "origin": "CTU",
+   "destination": "SHA",
+   "depart": "15:30",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1659,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-078",
+   "date": "2019-02-18",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU5137",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "07:00",
+   "arrive": "09:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-079",
+   "date": "2019-02-18",
+   "year": 2019,
+   "airline": "TG",
+   "flight": "TG206",
+   "origin": "HKT",
+   "destination": "BKK",
+   "depart": "16:30",
+   "arrive": "17:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 674,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-080",
+   "date": "2019-02-18",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL876",
+   "origin": "BKK",
+   "destination": "AMS",
+   "depart": "23:40",
+   "arrive": "05:40",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 720,
+   "timeSource": "historical_schedule",
+   "km": 9208,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-081",
+   "date": "2019-02-21",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU5156",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "21:00",
+   "arrive": "23:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-082",
+   "date": "2019-03-06",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1795",
+   "origin": "AMS",
+   "destination": "MUC",
+   "depart": "07:20",
+   "arrive": "08:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-083",
+   "date": "2019-03-08",
+   "year": 2019,
+   "airline": "LH",
+   "flight": "LH2300",
+   "origin": "MUC",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-084",
+   "date": "2019-03-23",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU2154",
+   "origin": "SHA",
+   "destination": "XIY",
+   "depart": "08:20",
+   "arrive": "10:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 150,
+   "timeSource": "historical_schedule",
+   "km": 1229,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-085",
+   "date": "2019-03-25",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU2153",
+   "origin": "XIY",
+   "destination": "SHA",
+   "depart": "16:45",
+   "arrive": "19:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 140,
+   "timeSource": "historical_schedule",
+   "km": 1229,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-086",
+   "date": "2019-04-13",
+   "year": 2019,
+   "airline": "9C",
+   "flight": "9C8569",
+   "origin": "PVG",
+   "destination": "KIX",
+   "depart": "07:45",
+   "arrive": "11:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 145,
+   "timeSource": "historical_schedule",
+   "km": 1307,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-087",
+   "date": "2019-04-19",
+   "year": 2019,
+   "airline": "JL",
+   "flight": "JL875",
+   "origin": "NRT",
+   "destination": "PVG",
+   "depart": "18:55",
+   "arrive": "21:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-088",
+   "date": "2019-06-08",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU5802",
+   "origin": "PVG",
+   "destination": "KMG",
+   "depart": "07:30",
+   "arrive": "11:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 225,
+   "timeSource": "historical_schedule",
+   "km": 1988,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-089",
+   "date": "2019-06-09",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU5915",
+   "origin": "KMG",
+   "destination": "LJG",
+   "depart": "10:00",
+   "arrive": "11:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 60,
+   "timeSource": "historical_schedule",
+   "km": 313,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-090",
+   "date": "2019-06-12",
+   "year": 2019,
+   "airline": "HO",
+   "flight": "HO1172",
+   "origin": "LJG",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 215,
+   "timeSource": "historical_schedule",
+   "km": 2153,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-091",
+   "date": "2019-07-07",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1351",
+   "origin": "AMS",
+   "destination": "PRG",
+   "depart": "08:40",
+   "arrive": "10:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 705,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-092",
+   "date": "2019-07-10",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1354",
+   "origin": "PRG",
+   "destination": "AMS",
+   "depart": "14:30",
+   "arrive": "16:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 705,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-093",
+   "date": "2019-08-24",
+   "year": 2019,
+   "airline": "9C",
+   "flight": "9C8545",
+   "origin": "PVG",
+   "destination": "HKT",
+   "depart": "07:25",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 300,
+   "timeSource": "historical_schedule",
+   "km": 3534,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-094",
+   "date": "2019-08-28",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-095",
+   "date": "2019-08-28",
+   "year": 2019,
+   "airline": "9C",
+   "flight": "9C8546",
+   "origin": "HKT",
+   "destination": "PVG",
+   "depart": "13:10",
+   "arrive": "18:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 270,
+   "timeSource": "historical_schedule",
+   "km": 3534,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-096",
+   "date": "2019-08-30",
+   "year": 2019,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-097",
+   "date": "2019-09-14",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL896",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "23:40",
+   "arrive": "06:20",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 760,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-098",
+   "date": "2019-09-15",
+   "year": 2019,
+   "airline": "TP",
+   "flight": "TP663",
+   "origin": "AMS",
+   "destination": "LIS",
+   "depart": "13:15",
+   "arrive": "15:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1846,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321neo",
+    "icao": "A21N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-099",
+   "date": "2019-09-17",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1693",
+   "origin": "AMS",
+   "destination": "LIS",
+   "depart": "09:30",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1846,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-100",
+   "date": "2019-09-24",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1720",
+   "origin": "OPO",
+   "destination": "AMS",
+   "depart": "11:40",
+   "arrive": "15:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 165,
+   "timeSource": "historical_schedule",
+   "km": 1595,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-101",
+   "date": "2019-09-27",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL895",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "14:15",
+   "arrive": "07:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 650,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-102",
+   "date": "2019-10-08",
+   "year": 2019,
+   "airline": "JL",
+   "flight": "JL876",
+   "origin": "PVG",
+   "destination": "NRT",
+   "depart": "15:05",
+   "arrive": "19:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-103",
+   "date": "2019-10-13",
+   "year": 2019,
+   "airline": "MU",
+   "flight": "MU524",
+   "origin": "NRT",
+   "destination": "PVG",
+   "depart": "14:30",
+   "arrive": "16:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 195,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-104",
+   "date": "2019-10-29",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-105",
+   "date": "2019-11-01",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-106",
+   "date": "2019-11-07",
+   "year": 2019,
+   "airline": "CX",
+   "flight": "CX369",
+   "origin": "PVG",
+   "destination": "HKG",
+   "depart": "10:20",
+   "arrive": "13:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1256,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-107",
+   "date": "2019-11-10",
+   "year": 2019,
+   "airline": "CX",
+   "flight": "CX366",
+   "origin": "HKG",
+   "destination": "PVG",
+   "depart": "13:45",
+   "arrive": "16:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 155,
+   "timeSource": "historical_schedule",
+   "km": 1256,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-108",
+   "date": "2019-12-20",
+   "year": 2019,
+   "airline": "KL",
+   "flight": "KL895",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "14:15",
+   "arrive": "08:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 650,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-109",
+   "date": "2019-12-24",
+   "year": 2019,
+   "airline": "9C",
+   "flight": "9C8761",
+   "origin": "PVG",
+   "destination": "KWL",
+   "depart": "10:35",
+   "arrive": "13:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1327,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-110",
+   "date": "2019-12-27",
+   "year": 2019,
+   "airline": "9C",
+   "flight": "9C8762",
+   "origin": "KWL",
+   "destination": "PVG",
+   "depart": "14:50",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 145,
+   "timeSource": "historical_schedule",
+   "km": 1327,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-111",
+   "date": "2020-01-02",
+   "year": 2020,
+   "airline": "KL",
+   "flight": "KL896",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "23:40",
+   "arrive": "05:20",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 760,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-112",
+   "date": "2020-01-04",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU771",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "13:05",
+   "arrive": "18:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 745,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-113",
+   "date": "2020-01-08",
+   "year": 2020,
+   "airline": "SK",
+   "flight": "SK552",
+   "origin": "AMS",
+   "destination": "CPH",
+   "depart": "10:05",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-114",
+   "date": "2020-01-10",
+   "year": 2020,
+   "airline": "SK",
+   "flight": "SK551",
+   "origin": "CPH",
+   "destination": "AMS",
+   "depart": "17:00",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-115",
+   "date": "2020-01-14",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU772",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "12:25",
+   "arrive": "06:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 640,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-116",
+   "date": "2020-01-21",
+   "year": 2020,
+   "airline": "3U",
+   "flight": "3U8964",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "13:40",
+   "arrive": "17:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-117",
+   "date": "2020-01-27",
+   "year": 2020,
+   "airline": "3U",
+   "flight": "3U8963",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "19:35",
+   "arrive": "22:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 165,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-118",
+   "date": "2020-08-09",
+   "year": 2020,
+   "airline": "HO",
+   "flight": "HO1155",
+   "origin": "PVG",
+   "destination": "SYX",
+   "depart": "09:20",
+   "arrive": "12:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-119",
+   "date": "2020-08-14",
+   "year": 2020,
+   "airline": "HO",
+   "flight": "HO1156",
+   "origin": "SYX",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "16:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 190,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-120",
+   "date": "2020-09-12",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU5101",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "08:00",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-121",
+   "date": "2020-09-14",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU5138",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "18:00",
+   "arrive": "20:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-122",
+   "date": "2020-09-20",
+   "year": 2020,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-123",
+   "date": "2020-09-22",
+   "year": 2020,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-124",
+   "date": "2020-10-17",
+   "year": 2020,
+   "airline": "KL",
+   "flight": "KL1351",
+   "origin": "AMS",
+   "destination": "PRG",
+   "depart": "08:40",
+   "arrive": "10:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 705,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-125",
+   "date": "2020-10-20",
+   "year": 2020,
+   "airline": "KL",
+   "flight": "KL1354",
+   "origin": "PRG",
+   "destination": "AMS",
+   "depart": "14:30",
+   "arrive": "16:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 705,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-126",
+   "date": "2020-10-26",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU2154",
+   "origin": "SHA",
+   "destination": "XIY",
+   "depart": "08:20",
+   "arrive": "10:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 150,
+   "timeSource": "historical_schedule",
+   "km": 1229,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-127",
+   "date": "2020-10-29",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU2153",
+   "origin": "XIY",
+   "destination": "SHA",
+   "depart": "16:45",
+   "arrive": "19:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 140,
+   "timeSource": "historical_schedule",
+   "km": 1229,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-128",
+   "date": "2020-11-14",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU5802",
+   "origin": "PVG",
+   "destination": "KMG",
+   "depart": "07:30",
+   "arrive": "11:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 225,
+   "timeSource": "historical_schedule",
+   "km": 1988,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-129",
+   "date": "2020-11-16",
+   "year": 2020,
+   "airline": "MU",
+   "flight": "MU5915",
+   "origin": "KMG",
+   "destination": "LJG",
+   "depart": "10:00",
+   "arrive": "11:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 60,
+   "timeSource": "historical_schedule",
+   "km": 313,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-130",
+   "date": "2020-11-20",
+   "year": 2020,
+   "airline": "HO",
+   "flight": "HO1172",
+   "origin": "LJG",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 215,
+   "timeSource": "historical_schedule",
+   "km": 2153,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-131",
+   "date": "2021-01-02",
+   "year": 2021,
+   "airline": "9C",
+   "flight": "9C8761",
+   "origin": "PVG",
+   "destination": "KWL",
+   "depart": "10:35",
+   "arrive": "13:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1327,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-132",
+   "date": "2021-01-06",
+   "year": 2021,
+   "airline": "9C",
+   "flight": "9C8762",
+   "origin": "KWL",
+   "destination": "PVG",
+   "depart": "14:50",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 145,
+   "timeSource": "historical_schedule",
+   "km": 1327,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-133",
+   "date": "2021-02-27",
+   "year": 2021,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-134",
+   "date": "2021-03-01",
+   "year": 2021,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-135",
+   "date": "2021-03-31",
+   "year": 2021,
+   "airline": "EI",
+   "flight": "EI603",
+   "origin": "AMS",
+   "destination": "DUB",
+   "depart": "08:25",
+   "arrive": "08:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-136",
+   "date": "2021-04-02",
+   "year": 2021,
+   "airline": "EI",
+   "flight": "EI610",
+   "origin": "DUB",
+   "destination": "AMS",
+   "depart": "17:40",
+   "arrive": "20:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-137",
+   "date": "2021-05-11",
+   "year": 2021,
+   "airline": "MU",
+   "flight": "MU5137",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "07:00",
+   "arrive": "09:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-138",
+   "date": "2021-05-11",
+   "year": 2021,
+   "airline": "MU",
+   "flight": "MU5156",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "21:00",
+   "arrive": "23:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-139",
+   "date": "2021-06-22",
+   "year": 2021,
+   "airline": "CA",
+   "flight": "CA1858",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "09:30",
+   "arrive": "11:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 140,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-140",
+   "date": "2021-06-25",
+   "year": 2021,
+   "airline": "MU",
+   "flight": "MU5156",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "21:00",
+   "arrive": "23:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-141",
+   "date": "2021-12-23",
+   "year": 2021,
+   "airline": "MU",
+   "flight": "MU5802",
+   "origin": "PVG",
+   "destination": "KMG",
+   "depart": "07:30",
+   "arrive": "11:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 225,
+   "timeSource": "historical_schedule",
+   "km": 1988,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-142",
+   "date": "2021-12-24",
+   "year": 2021,
+   "airline": "MU",
+   "flight": "MU5915",
+   "origin": "KMG",
+   "destination": "LJG",
+   "depart": "10:00",
+   "arrive": "11:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 60,
+   "timeSource": "historical_schedule",
+   "km": 313,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-143",
+   "date": "2021-12-28",
+   "year": 2021,
+   "airline": "HO",
+   "flight": "HO1172",
+   "origin": "LJG",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 215,
+   "timeSource": "historical_schedule",
+   "km": 2153,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-144",
+   "date": "2022-01-07",
+   "year": 2022,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-145",
+   "date": "2022-01-08",
+   "year": 2022,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-146",
+   "date": "2022-01-28",
+   "year": 2022,
+   "airline": "MU",
+   "flight": "MU5403",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "17:30",
+   "arrive": "21:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 210,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-147",
+   "date": "2022-01-30",
+   "year": 2022,
+   "airline": "KL",
+   "flight": "KL1665",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "09:10",
+   "arrive": "11:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-148",
+   "date": "2022-02-04",
+   "year": 2022,
+   "airline": "VY",
+   "flight": "VY8305",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "16:10",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-149",
+   "date": "2022-02-06",
+   "year": 2022,
+   "airline": "MU",
+   "flight": "MU5404",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "08:30",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-150",
+   "date": "2022-03-01",
+   "year": 2022,
+   "airline": "MU",
+   "flight": "MU5137",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "07:00",
+   "arrive": "09:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-151",
+   "date": "2022-03-02",
+   "year": 2022,
+   "airline": "CA",
+   "flight": "CA1519",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "20:30",
+   "arrive": "22:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-152",
+   "date": "2022-12-18",
+   "year": 2022,
+   "airline": "HO",
+   "flight": "HO1155",
+   "origin": "PVG",
+   "destination": "SYX",
+   "depart": "09:20",
+   "arrive": "12:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-153",
+   "date": "2022-12-22",
+   "year": 2022,
+   "airline": "HO",
+   "flight": "HO1156",
+   "origin": "SYX",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "16:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 190,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-154",
+   "date": "2023-01-17",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1775",
+   "origin": "AMS",
+   "destination": "BER",
+   "depart": "08:40",
+   "arrive": "09:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 593,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-155",
+   "date": "2023-01-19",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5411",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "08:05",
+   "arrive": "11:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 205,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-156",
+   "date": "2023-01-21",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1776",
+   "origin": "BER",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 593,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-157",
+   "date": "2023-01-26",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5412",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "13:10",
+   "arrive": "16:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 170,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-158",
+   "date": "2023-02-03",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL896",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "23:40",
+   "arrive": "06:35",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 835,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-159",
+   "date": "2023-02-08",
+   "year": 2023,
+   "airline": "FI",
+   "flight": "FI501",
+   "origin": "AMS",
+   "destination": "KEF",
+   "depart": "14:00",
+   "arrive": "16:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 190,
+   "timeSource": "historical_schedule",
+   "km": 2038,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737 MAX 8",
+    "icao": "B38M",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-160",
+   "date": "2023-02-12",
+   "year": 2023,
+   "airline": "FI",
+   "flight": "FI500",
+   "origin": "KEF",
+   "destination": "AMS",
+   "depart": "07:40",
+   "arrive": "11:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 185,
+   "timeSource": "historical_schedule",
+   "km": 2038,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737 MAX 8",
+    "icao": "B38M",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-161",
+   "date": "2023-02-20",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL895",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "14:15",
+   "arrive": "10:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 770,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-162",
+   "date": "2023-03-10",
+   "year": 2023,
+   "airline": "EI",
+   "flight": "EI603",
+   "origin": "AMS",
+   "destination": "DUB",
+   "depart": "08:25",
+   "arrive": "08:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-163",
+   "date": "2023-03-12",
+   "year": 2023,
+   "airline": "EI",
+   "flight": "EI610",
+   "origin": "DUB",
+   "destination": "AMS",
+   "depart": "17:40",
+   "arrive": "20:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-164",
+   "date": "2023-03-15",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5101",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "08:00",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-165",
+   "date": "2023-03-16",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5138",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "18:00",
+   "arrive": "20:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-166",
+   "date": "2023-04-12",
+   "year": 2023,
+   "airline": "9C",
+   "flight": "9C8807",
+   "origin": "PVG",
+   "destination": "SYX",
+   "depart": "07:00",
+   "arrive": "10:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-167",
+   "date": "2023-04-16",
+   "year": 2023,
+   "airline": "HO",
+   "flight": "HO1156",
+   "origin": "SYX",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "16:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 190,
+   "timeSource": "historical_schedule",
+   "km": 1896,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-168",
+   "date": "2023-04-27",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL895",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "14:15",
+   "arrive": "09:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 770,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-169",
+   "date": "2023-04-30",
+   "year": 2023,
+   "airline": "9C",
+   "flight": "9C8569",
+   "origin": "PVG",
+   "destination": "KIX",
+   "depart": "07:45",
+   "arrive": "11:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 145,
+   "timeSource": "historical_schedule",
+   "km": 1307,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-170",
+   "date": "2023-05-06",
+   "year": 2023,
+   "airline": "JL",
+   "flight": "JL875",
+   "origin": "NRT",
+   "destination": "PVG",
+   "depart": "18:55",
+   "arrive": "21:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-171",
+   "date": "2023-05-12",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL896",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "23:40",
+   "arrive": "07:35",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 835,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-172",
+   "date": "2023-05-25",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU729",
+   "origin": "PVG",
+   "destination": "KIX",
+   "depart": "09:05",
+   "arrive": "12:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 150,
+   "timeSource": "historical_schedule",
+   "km": 1307,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-173",
+   "date": "2023-05-30",
+   "year": 2023,
+   "airline": "JL",
+   "flight": "JL875",
+   "origin": "NRT",
+   "destination": "PVG",
+   "depart": "18:55",
+   "arrive": "21:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1796,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-8",
+    "icao": "B788",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-174",
+   "date": "2023-06-10",
+   "year": 2023,
+   "airline": "7C",
+   "flight": "7C8802",
+   "origin": "PVG",
+   "destination": "CJU",
+   "depart": "16:10",
+   "arrive": "18:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 100,
+   "timeSource": "historical_schedule",
+   "km": 513,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-175",
+   "date": "2023-06-13",
+   "year": 2023,
+   "airline": "7C",
+   "flight": "7C8801",
+   "origin": "CJU",
+   "destination": "PVG",
+   "depart": "12:30",
+   "arrive": "13:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 110,
+   "timeSource": "historical_schedule",
+   "km": 513,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-176",
+   "date": "2023-07-08",
+   "year": 2023,
+   "airline": "CX",
+   "flight": "CX369",
+   "origin": "PVG",
+   "destination": "HKG",
+   "depart": "10:20",
+   "arrive": "13:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 160,
+   "timeSource": "historical_schedule",
+   "km": 1256,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-177",
+   "date": "2023-07-10",
+   "year": 2023,
+   "airline": "CX",
+   "flight": "CX366",
+   "origin": "HKG",
+   "destination": "PVG",
+   "depart": "13:45",
+   "arrive": "16:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 155,
+   "timeSource": "historical_schedule",
+   "km": 1256,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-178",
+   "date": "2023-07-16",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1665",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "09:10",
+   "arrive": "11:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-179",
+   "date": "2023-07-19",
+   "year": 2023,
+   "airline": "VY",
+   "flight": "VY8305",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "16:10",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-180",
+   "date": "2023-07-20",
+   "year": 2023,
+   "airline": "CA",
+   "flight": "CA1858",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "09:30",
+   "arrive": "11:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 140,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-181",
+   "date": "2023-07-21",
+   "year": 2023,
+   "airline": "CA",
+   "flight": "CA1519",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "20:30",
+   "arrive": "22:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-182",
+   "date": "2023-07-31",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5802",
+   "origin": "PVG",
+   "destination": "KMG",
+   "depart": "07:30",
+   "arrive": "11:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 225,
+   "timeSource": "historical_schedule",
+   "km": 1988,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-183",
+   "date": "2023-08-02",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5915",
+   "origin": "KMG",
+   "destination": "LJG",
+   "depart": "10:00",
+   "arrive": "11:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 60,
+   "timeSource": "historical_schedule",
+   "km": 313,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-184",
+   "date": "2023-08-05",
+   "year": 2023,
+   "airline": "HO",
+   "flight": "HO1172",
+   "origin": "LJG",
+   "destination": "PVG",
+   "depart": "13:40",
+   "arrive": "17:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 215,
+   "timeSource": "historical_schedule",
+   "km": 2153,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-185",
+   "date": "2023-08-16",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5137",
+   "origin": "SHA",
+   "destination": "PEK",
+   "depart": "07:00",
+   "arrive": "09:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-186",
+   "date": "2023-08-16",
+   "year": 2023,
+   "airline": "MU",
+   "flight": "MU5156",
+   "origin": "PEK",
+   "destination": "SHA",
+   "depart": "21:00",
+   "arrive": "23:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1076,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-187",
+   "date": "2023-09-02",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL896",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "23:40",
+   "arrive": "07:35",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 835,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-188",
+   "date": "2023-09-25",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1795",
+   "origin": "AMS",
+   "destination": "MUC",
+   "depart": "07:20",
+   "arrive": "08:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-189",
+   "date": "2023-09-27",
+   "year": 2023,
+   "airline": "LH",
+   "flight": "LH2300",
+   "origin": "MUC",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-190",
+   "date": "2023-10-07",
+   "year": 2023,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-191",
+   "date": "2023-10-08",
+   "year": 2023,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-192",
+   "date": "2023-10-11",
+   "year": 2023,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-193",
+   "date": "2023-10-12",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-194",
+   "date": "2023-11-01",
+   "year": 2023,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-195",
+   "date": "2023-11-02",
+   "year": 2023,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-196",
+   "date": "2023-12-13",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-197",
+   "date": "2023-12-15",
+   "year": 2023,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-198",
+   "date": "2023-12-26",
+   "year": 2023,
+   "airline": "OS",
+   "flight": "OS372",
+   "origin": "AMS",
+   "destination": "VIE",
+   "depart": "12:50",
+   "arrive": "14:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 105,
+   "timeSource": "historical_schedule",
+   "km": 959,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-199",
+   "date": "2023-12-29",
+   "year": 2023,
+   "airline": "OS",
+   "flight": "OS371",
+   "origin": "VIE",
+   "destination": "AMS",
+   "depart": "10:00",
+   "arrive": "11:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 115,
+   "timeSource": "historical_schedule",
+   "km": 959,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-200",
+   "date": "2024-02-06",
+   "year": 2024,
+   "airline": "MU",
+   "flight": "MU772",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "12:25",
+   "arrive": "08:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 760,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-201",
+   "date": "2024-02-07",
+   "year": 2024,
+   "airline": "3U",
+   "flight": "3U8964",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "13:40",
+   "arrive": "17:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-202",
+   "date": "2024-02-16",
+   "year": 2024,
+   "airline": "MU",
+   "flight": "MU5404",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "08:30",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-203",
+   "date": "2024-02-16",
+   "year": 2024,
+   "airline": "MU",
+   "flight": "MU771",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "13:05",
+   "arrive": "19:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 820,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-204",
+   "date": "2024-03-24",
+   "year": 2024,
+   "airline": "SK",
+   "flight": "SK552",
+   "origin": "AMS",
+   "destination": "CPH",
+   "depart": "10:05",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-205",
+   "date": "2024-03-26",
+   "year": 2024,
+   "airline": "SK",
+   "flight": "SK551",
+   "origin": "CPH",
+   "destination": "AMS",
+   "depart": "17:00",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-206",
+   "date": "2024-04-05",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL861",
+   "origin": "AMS",
+   "destination": "HND",
+   "depart": "14:40",
+   "arrive": "12:00",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 860,
+   "timeSource": "historical_schedule",
+   "km": 9316,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-207",
+   "date": "2024-04-17",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL862",
+   "origin": "HND",
+   "destination": "AMS",
+   "depart": "22:25",
+   "arrive": "05:55",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 870,
+   "timeSource": "historical_schedule",
+   "km": 9316,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-208",
+   "date": "2024-05-08",
+   "year": 2024,
+   "airline": "EI",
+   "flight": "EI603",
+   "origin": "AMS",
+   "destination": "DUB",
+   "depart": "08:25",
+   "arrive": "08:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-209",
+   "date": "2024-05-10",
+   "year": 2024,
+   "airline": "EI",
+   "flight": "EI610",
+   "origin": "DUB",
+   "destination": "AMS",
+   "depart": "17:40",
+   "arrive": "20:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-210",
+   "date": "2024-06-04",
+   "year": 2024,
+   "airline": "HV",
+   "flight": "HV5545",
+   "origin": "AMS",
+   "destination": "RAK",
+   "depart": "10:35",
+   "arrive": "13:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 230,
+   "timeSource": "historical_schedule",
+   "km": 2525,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-211",
+   "date": "2024-06-09",
+   "year": 2024,
+   "airline": "HV",
+   "flight": "HV5546",
+   "origin": "RAK",
+   "destination": "AMS",
+   "depart": "15:20",
+   "arrive": "20:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 220,
+   "timeSource": "historical_schedule",
+   "km": 2525,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-212",
+   "date": "2024-06-19",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1693",
+   "origin": "AMS",
+   "destination": "LIS",
+   "depart": "09:30",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1846,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-213",
+   "date": "2024-06-23",
+   "year": 2024,
+   "airline": "TP",
+   "flight": "TP668",
+   "origin": "LIS",
+   "destination": "AMS",
+   "depart": "18:45",
+   "arrive": "22:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 170,
+   "timeSource": "historical_schedule",
+   "km": 1846,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A321neo",
+    "icao": "A21N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-214",
+   "date": "2024-07-02",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-215",
+   "date": "2024-07-05",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-216",
+   "date": "2024-07-26",
+   "year": 2024,
+   "airline": "VY",
+   "flight": "VY8302",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "10:20",
+   "arrive": "12:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-217",
+   "date": "2024-07-31",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1670",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "20:15",
+   "arrive": "22:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-218",
+   "date": "2024-08-08",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-219",
+   "date": "2024-08-10",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-220",
+   "date": "2024-08-30",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-221",
+   "date": "2024-09-03",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-222",
+   "date": "2024-09-12",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL641",
+   "origin": "AMS",
+   "destination": "JFK",
+   "depart": "10:40",
+   "arrive": "13:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 505,
+   "timeSource": "historical_schedule",
+   "km": 5848,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-223",
+   "date": "2024-09-17",
+   "year": 2024,
+   "airline": "B6",
+   "flight": "B6415",
+   "origin": "JFK",
+   "destination": "SFO",
+   "depart": "08:00",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 385,
+   "timeSource": "historical_schedule",
+   "km": 4152,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A321neo",
+    "icao": "A21N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-224",
+   "date": "2024-09-21",
+   "year": 2024,
+   "airline": "UA",
+   "flight": "UA1158",
+   "origin": "SFO",
+   "destination": "HNL",
+   "depart": "09:30",
+   "arrive": "12:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 330,
+   "timeSource": "historical_schedule",
+   "km": 3857,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-200",
+    "icao": "B772",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-225",
+   "date": "2024-09-27",
+   "year": 2024,
+   "airline": "UA",
+   "flight": "UA1196",
+   "origin": "HNL",
+   "destination": "SFO",
+   "depart": "22:00",
+   "arrive": "06:00",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 300,
+   "timeSource": "historical_schedule",
+   "km": 3857,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-200",
+    "icao": "B772",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-226",
+   "date": "2024-09-28",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL606",
+   "origin": "SFO",
+   "destination": "AMS",
+   "depart": "14:15",
+   "arrive": "10:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 650,
+   "timeSource": "historical_schedule",
+   "km": 8786,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-10",
+    "icao": "B78X",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-227",
+   "date": "2024-10-17",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1795",
+   "origin": "AMS",
+   "destination": "MUC",
+   "depart": "07:20",
+   "arrive": "08:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-228",
+   "date": "2024-10-18",
+   "year": 2024,
+   "airline": "LH",
+   "flight": "LH2300",
+   "origin": "MUC",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-229",
+   "date": "2024-11-27",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-230",
+   "date": "2024-11-28",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-231",
+   "date": "2024-12-10",
+   "year": 2024,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-232",
+   "date": "2024-12-11",
+   "year": 2024,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-233",
+   "date": "2024-12-13",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-234",
+   "date": "2024-12-16",
+   "year": 2024,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-235",
+   "date": "2025-01-24",
+   "year": 2025,
+   "airline": "MU",
+   "flight": "MU772",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "12:25",
+   "arrive": "08:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 760,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-236",
+   "date": "2025-01-25",
+   "year": 2025,
+   "airline": "3U",
+   "flight": "3U8964",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "13:40",
+   "arrive": "17:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-237",
+   "date": "2025-02-02",
+   "year": 2025,
+   "airline": "MU",
+   "flight": "MU5404",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "08:30",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-238",
+   "date": "2025-02-02",
+   "year": 2025,
+   "airline": "MU",
+   "flight": "MU771",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "13:05",
+   "arrive": "19:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 820,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-239",
+   "date": "2025-02-24",
+   "year": 2025,
+   "airline": "VY",
+   "flight": "VY8302",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "10:20",
+   "arrive": "12:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-240",
+   "date": "2025-03-01",
+   "year": 2025,
+   "airline": "VY",
+   "flight": "VY8305",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "16:10",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-241",
+   "date": "2025-03-09",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1795",
+   "origin": "AMS",
+   "destination": "MUC",
+   "depart": "07:20",
+   "arrive": "08:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-242",
+   "date": "2025-03-11",
+   "year": 2025,
+   "airline": "LH",
+   "flight": "LH2300",
+   "origin": "MUC",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-243",
+   "date": "2025-03-27",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-244",
+   "date": "2025-03-28",
+   "year": 2025,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-245",
+   "date": "2025-05-05",
+   "year": 2025,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-246",
+   "date": "2025-05-07",
+   "year": 2025,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-247",
+   "date": "2025-05-17",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-248",
+   "date": "2025-05-18",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-249",
+   "date": "2025-06-10",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1263",
+   "origin": "AMS",
+   "destination": "NCE",
+   "depart": "09:35",
+   "arrive": "11:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 125,
+   "timeSource": "historical_schedule",
+   "km": 979,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-250",
+   "date": "2025-06-16",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1264",
+   "origin": "NCE",
+   "destination": "AMS",
+   "depart": "12:40",
+   "arrive": "14:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 979,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-251",
+   "date": "2025-06-29",
+   "year": 2025,
+   "airline": "SK",
+   "flight": "SK552",
+   "origin": "AMS",
+   "destination": "CPH",
+   "depart": "10:05",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-252",
+   "date": "2025-07-02",
+   "year": 2025,
+   "airline": "SK",
+   "flight": "SK551",
+   "origin": "CPH",
+   "destination": "AMS",
+   "depart": "17:00",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-253",
+   "date": "2025-07-26",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-254",
+   "date": "2025-07-30",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-255",
+   "date": "2025-08-10",
+   "year": 2025,
+   "airline": "HV",
+   "flight": "HV5545",
+   "origin": "AMS",
+   "destination": "RAK",
+   "depart": "10:35",
+   "arrive": "13:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 230,
+   "timeSource": "historical_schedule",
+   "km": 2525,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-256",
+   "date": "2025-08-15",
+   "year": 2025,
+   "airline": "HV",
+   "flight": "HV5546",
+   "origin": "RAK",
+   "destination": "AMS",
+   "depart": "15:20",
+   "arrive": "20:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 220,
+   "timeSource": "historical_schedule",
+   "km": 2525,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-257",
+   "date": "2025-10-07",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-258",
+   "date": "2025-10-08",
+   "year": 2025,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-259",
+   "date": "2025-10-30",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL597",
+   "origin": "AMS",
+   "destination": "CPT",
+   "depart": "10:15",
+   "arrive": "22:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 700,
+   "timeSource": "historical_schedule",
+   "km": 9687,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-260",
+   "date": "2025-11-11",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL598",
+   "origin": "CPT",
+   "destination": "AMS",
+   "depart": "19:20",
+   "arrive": "06:15",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 715,
+   "timeSource": "historical_schedule",
+   "km": 9687,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-261",
+   "date": "2025-11-25",
+   "year": 2025,
+   "airline": "VY",
+   "flight": "VY8302",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "10:20",
+   "arrive": "12:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-262",
+   "date": "2025-11-28",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1670",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "20:15",
+   "arrive": "22:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-263",
+   "date": "2025-12-28",
+   "year": 2025,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-264",
+   "date": "2025-12-30",
+   "year": 2025,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-265",
+   "date": "2026-01-12",
+   "year": 2026,
+   "airline": "TP",
+   "flight": "TP663",
+   "origin": "AMS",
+   "destination": "LIS",
+   "depart": "13:15",
+   "arrive": "15:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1846,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A321neo",
+    "icao": "A21N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-266",
+   "date": "2026-01-16",
+   "year": 2026,
+   "airline": "TP",
+   "flight": "TP668",
+   "origin": "LIS",
+   "destination": "AMS",
+   "depart": "18:45",
+   "arrive": "22:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 170,
+   "timeSource": "historical_schedule",
+   "km": 1846,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A321neo",
+    "icao": "A21N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-267",
+   "date": "2026-01-31",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-268",
+   "date": "2026-02-03",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-269",
+   "date": "2026-02-23",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-270",
+   "date": "2026-02-26",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1006",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "17:45",
+   "arrive": "19:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-271",
+   "date": "2026-03-14",
+   "year": 2026,
+   "airline": "EK",
+   "flight": "EK148",
+   "origin": "AMS",
+   "destination": "DXB",
+   "depart": "15:15",
+   "arrive": "00:55",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 400,
+   "timeSource": "historical_schedule",
+   "km": 5169,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-272",
+   "date": "2026-03-15",
+   "year": 2026,
+   "airline": "EK",
+   "flight": "EK652",
+   "origin": "DXB",
+   "destination": "MLE",
+   "depart": "02:40",
+   "arrive": "08:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 260,
+   "timeSource": "historical_schedule",
+   "km": 3041,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-273",
+   "date": "2026-03-22",
+   "year": 2026,
+   "airline": "EK",
+   "flight": "EK653",
+   "origin": "MLE",
+   "destination": "DXB",
+   "depart": "09:50",
+   "arrive": "13:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 270,
+   "timeSource": "historical_schedule",
+   "km": 3041,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-274",
+   "date": "2026-03-22",
+   "year": 2026,
+   "airline": "EK",
+   "flight": "EK147",
+   "origin": "DXB",
+   "destination": "AMS",
+   "depart": "15:05",
+   "arrive": "19:10",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 425,
+   "timeSource": "historical_schedule",
+   "km": 5169,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 777-300ER",
+    "icao": "B77W",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-275",
+   "date": "2026-04-23",
+   "year": 2026,
+   "airline": "OS",
+   "flight": "OS372",
+   "origin": "AMS",
+   "destination": "VIE",
+   "depart": "12:50",
+   "arrive": "14:35",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 105,
+   "timeSource": "historical_schedule",
+   "km": 959,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-276",
+   "date": "2026-04-27",
+   "year": 2026,
+   "airline": "OS",
+   "flight": "OS371",
+   "origin": "VIE",
+   "destination": "AMS",
+   "depart": "10:00",
+   "arrive": "11:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 115,
+   "timeSource": "historical_schedule",
+   "km": 959,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-277",
+   "date": "2026-05-06",
+   "year": 2026,
+   "airline": "EI",
+   "flight": "EI603",
+   "origin": "AMS",
+   "destination": "DUB",
+   "depart": "08:25",
+   "arrive": "08:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-278",
+   "date": "2026-05-08",
+   "year": 2026,
+   "airline": "EI",
+   "flight": "EI610",
+   "origin": "DUB",
+   "destination": "AMS",
+   "depart": "17:40",
+   "arrive": "20:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 750,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-279",
+   "date": "2026-05-09",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1775",
+   "origin": "AMS",
+   "destination": "BER",
+   "depart": "08:40",
+   "arrive": "09:55",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 593,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-280",
+   "date": "2026-05-12",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1776",
+   "origin": "BER",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 593,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-281",
+   "date": "2026-06-11",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1575",
+   "origin": "AMS",
+   "destination": "ATH",
+   "depart": "09:00",
+   "arrive": "13:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 195,
+   "timeSource": "historical_schedule",
+   "km": 2182,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-282",
+   "date": "2026-06-12",
+   "year": 2026,
+   "airline": "A3",
+   "flight": "A3360",
+   "origin": "ATH",
+   "destination": "JTR",
+   "depart": "12:30",
+   "arrive": "13:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 45,
+   "timeSource": "historical_schedule",
+   "km": 218,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-283",
+   "date": "2026-06-16",
+   "year": 2026,
+   "airline": "A3",
+   "flight": "A3367",
+   "origin": "JTR",
+   "destination": "ATH",
+   "depart": "13:00",
+   "arrive": "13:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 45,
+   "timeSource": "historical_schedule",
+   "km": 218,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-284",
+   "date": "2026-06-16",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1576",
+   "origin": "ATH",
+   "destination": "AMS",
+   "depart": "15:30",
+   "arrive": "18:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 210,
+   "timeSource": "historical_schedule",
+   "km": 2182,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-285",
+   "date": "2026-07-18",
+   "year": 2026,
+   "airline": "VY",
+   "flight": "VY8302",
+   "origin": "AMS",
+   "destination": "BCN",
+   "depart": "10:20",
+   "arrive": "12:30",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 130,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-286",
+   "date": "2026-07-21",
+   "year": 2026,
+   "airline": "VY",
+   "flight": "VY8305",
+   "origin": "BCN",
+   "destination": "AMS",
+   "depart": "16:10",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 135,
+   "timeSource": "historical_schedule",
+   "km": 1241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-287",
+   "date": "2026-08-17",
+   "year": 2026,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-288",
+   "date": "2026-08-19",
+   "year": 2026,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-289",
+   "date": "2026-08-31",
+   "year": 2026,
+   "airline": "SK",
+   "flight": "SK552",
+   "origin": "AMS",
+   "destination": "CPH",
+   "depart": "10:05",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 80,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-290",
+   "date": "2026-09-03",
+   "year": 2026,
+   "airline": "SK",
+   "flight": "SK551",
+   "origin": "CPH",
+   "destination": "AMS",
+   "depart": "17:00",
+   "arrive": "18:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 633,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320neo",
+    "icao": "A20N",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-291",
+   "date": "2026-09-30",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1281",
+   "origin": "AMS",
+   "destination": "EDI",
+   "depart": "09:50",
+   "arrive": "10:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-292",
+   "date": "2026-10-04",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1284",
+   "origin": "EDI",
+   "destination": "AMS",
+   "depart": "13:40",
+   "arrive": "16:05",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 666,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-700",
+    "icao": "B737",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-293",
+   "date": "2026-10-11",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1795",
+   "origin": "AMS",
+   "destination": "MUC",
+   "depart": "07:20",
+   "arrive": "08:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 85,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-294",
+   "date": "2026-10-13",
+   "year": 2026,
+   "airline": "LH",
+   "flight": "LH2300",
+   "origin": "MUC",
+   "destination": "AMS",
+   "depart": "18:20",
+   "arrive": "19:50",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 90,
+   "timeSource": "historical_schedule",
+   "km": 664,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-295",
+   "date": "2026-10-24",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL1001",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "07:00",
+   "arrive": "07:15",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 75,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 737-800",
+    "icao": "B738",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-296",
+   "date": "2026-10-26",
+   "year": 2026,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "Z",
+   "travellerIds": [
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-297",
+   "date": "2026-11-26",
+   "year": 2026,
+   "airline": "BA",
+   "flight": "BA431",
+   "origin": "AMS",
+   "destination": "LHR",
+   "depart": "09:30",
+   "arrive": "09:40",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-298",
+   "date": "2026-11-27",
+   "year": 2026,
+   "airline": "BA",
+   "flight": "BA438",
+   "origin": "LHR",
+   "destination": "AMS",
+   "depart": "19:15",
+   "arrive": "21:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 70,
+   "timeSource": "historical_schedule",
+   "km": 370,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A320",
+    "icao": "A320",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-299",
+   "date": "2026-12-18",
+   "year": 2026,
+   "airline": "KL",
+   "flight": "KL855",
+   "origin": "AMS",
+   "destination": "ICN",
+   "depart": "14:25",
+   "arrive": "11:35",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 790,
+   "timeSource": "historical_schedule",
+   "km": 8552,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-300",
+   "date": "2026-12-25",
+   "year": 2026,
+   "airline": "KE",
+   "flight": "KE723",
+   "origin": "ICN",
+   "destination": "KIX",
+   "depart": "09:00",
+   "arrive": "10:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 105,
+   "timeSource": "historical_schedule",
+   "km": 860,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Airbus A330-300",
+    "icao": "A333",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-301",
+   "date": "2027-01-01",
+   "year": 2027,
+   "airline": "KL",
+   "flight": "KL868",
+   "origin": "KIX",
+   "destination": "AMS",
+   "depart": "10:50",
+   "arrive": "17:20",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 870,
+   "timeSource": "historical_schedule",
+   "km": 9241,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B",
+    "Z"
+   ],
+   "aircraft": {
+    "model": "Boeing 787-9",
+    "icao": "B789",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-302",
+   "date": "2027-02-03",
+   "year": 2027,
+   "airline": "MU",
+   "flight": "MU772",
+   "origin": "AMS",
+   "destination": "PVG",
+   "depart": "12:25",
+   "arrive": "08:05",
+   "arrivalDayOffset": 1,
+   "durationMinutes": 760,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-303",
+   "date": "2027-02-04",
+   "year": 2027,
+   "airline": "3U",
+   "flight": "3U8964",
+   "origin": "PVG",
+   "destination": "CTU",
+   "depart": "13:40",
+   "arrive": "17:00",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 200,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A321",
+    "icao": "A321",
+    "source": "typical",
+    "body": "narrowbody"
+   }
+  },
+  {
+   "id": "DEMO-304",
+   "date": "2027-02-14",
+   "year": 2027,
+   "airline": "MU",
+   "flight": "MU5404",
+   "origin": "CTU",
+   "destination": "PVG",
+   "depart": "08:30",
+   "arrive": "11:25",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 175,
+   "timeSource": "historical_schedule",
+   "km": 1704,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  },
+  {
+   "id": "DEMO-305",
+   "date": "2027-02-14",
+   "year": 2027,
+   "airline": "MU",
+   "flight": "MU771",
+   "origin": "PVG",
+   "destination": "AMS",
+   "depart": "13:05",
+   "arrive": "19:45",
+   "arrivalDayOffset": 0,
+   "durationMinutes": 820,
+   "timeSource": "historical_schedule",
+   "km": 8910,
+   "status": "demo",
+   "source": "synthetic",
+   "confidence": "confirmed",
+   "travellerId": "B",
+   "travellerIds": [
+    "B"
+   ],
+   "aircraft": {
+    "model": "Airbus A350-900",
+    "icao": "A359",
+    "source": "typical",
+    "body": "widebody"
+   }
+  }
+ ]
+}

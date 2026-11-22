@@ -1,0 +1,28 @@
+# Flyprint on your own machine:
+#   docker compose up -d
+# then open http://localhost:3000 and create the first account.
+#
+# Reading screenshots and PDFs needs an Anthropic API key. Put
+#   ANTHROPIC_API_KEY=<your key>
+# in a .env file next to this one (chmod 600). Every other format
+# (Flighty, Flightradar24 and OpenFlights exports, Wallet passes, calendars,
+# boarding-pass barcodes, spreadsheets) imports without it.
+services:
+  flyprint:
+    image: ghcr.io/billpwchan/flyprint:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      FLYPRINT_DATA_DIR: /data
+      # The address people use to reach it, for public pages and link previews:
+      # FLYPRINT_ORIGIN: https://flights.example.com
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Every account and flight lives here; back this volume up.
+      - flyprint-data:/data
+
+volumes:
+  flyprint-data:

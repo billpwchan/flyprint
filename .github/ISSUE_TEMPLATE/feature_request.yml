@@ -1,0 +1,35 @@
+name: 功能建议
+description: 从具体场景出发，讨论如何改善航迹。
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你希望解决什么问题？
+      description: 描述使用场景、目前的阻碍与受影响的人。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的体验
+      description: 可以附草图、合成截图或参考，但不要分享真实行程。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 已考虑的替代方案
+  - type: textarea
+    id: success
+    attributes:
+      label: 怎样判断它完成了？
+      placeholder: 可实际验证的结果，兼容性与维护成本。
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: 你愿意参与哪部分？
+      options:
+        - 提供场景与反馈
+        - 帮助实现或测试
+        - 文档与本地化

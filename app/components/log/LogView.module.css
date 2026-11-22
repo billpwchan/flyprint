@@ -1,0 +1,277 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 11px;
+  background: var(--fill);
+  transition: box-shadow 160ms var(--ease), background-color 160ms var(--ease);
+}
+
+.search:focus-within {
+  background: var(--fill-2);
+  box-shadow: 0 0 0 3px rgba(135, 174, 221, 0.12);
+}
+
+.search > svg {
+  flex: none;
+  width: 17px;
+  height: 17px;
+  color: var(--ink-3);
+  stroke-width: 1.75;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: var(--ink-4);
+}
+
+.search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin-right: -6px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+
+.search button:hover {
+  color: var(--ink);
+  background: var(--fill-2);
+}
+
+.search button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.search kbd {
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--fill-2);
+  font: inherit;
+  font-size: 11px;
+  color: var(--ink-4);
+}
+
+@media (pointer: coarse) {
+  .search kbd {
+    display: none;
+  }
+}
+
+.count {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.cities {
+  display: grid;
+  margin-bottom: 8px;
+}
+
+.cityResult {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 -12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background-color 160ms var(--ease);
+}
+
+.cityResult:hover {
+  background: var(--fill);
+}
+
+.cityResult strong {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.cityResult span {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.cityResult svg {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  color: var(--ink-4);
+  transition: color 160ms var(--ease), transform 160ms var(--ease);
+}
+
+.cityResult:hover svg {
+  color: var(--ink-2);
+  transform: translateX(2px);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4.4em minmax(0, 1fr) 6.4em 3.2em;
+  grid-template-areas:
+    "date route flight time"
+    ". sky sky sky";
+  align-items: center;
+  gap: 0 12px;
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  transition: background-color 160ms var(--ease);
+}
+
+.row:hover {
+  background: var(--fill);
+}
+
+.date {
+  grid-area: date;
+  display: grid;
+  font-size: 13px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.date small {
+  font-size: 11px;
+  color: var(--t);
+}
+
+.date small[data-soon="true"] {
+  color: var(--tone);
+}
+
+/* Codes on one line and city names under them, like the time column beside
+   it: the names stay whole or ellipsize as one line, never clip mid-word. */
+.route {
+  grid-area: route;
+  display: grid;
+  min-width: 0;
+}
+
+.codes {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.codes b {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.codes i {
+  font-style: normal;
+  color: var(--ink-4);
+}
+
+.cityNames {
+  overflow: hidden;
+  font-size: 11px;
+  color: var(--ink-3);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flight {
+  grid-area: flight;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-2);
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  margin-left: auto;
+  border-radius: 50%;
+}
+
+.time {
+  grid-area: time;
+  display: grid;
+  justify-items: end;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.time small {
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.time sup {
+  margin-left: 1px;
+  font-size: 9px;
+  color: var(--t);
+  line-height: 0;
+}
+
+@media (max-width: 760px) {
+  .row {
+    grid-template-columns: 4.2em minmax(0, 1fr) auto;
+    grid-template-areas:
+      "date route time"
+      "date flight time"
+      ". sky sky";
+    row-gap: 2px;
+  }
+
+  .cityNames {
+    display: none;
+  }
+
+  .flight {
+    font-size: 12px;
+    color: var(--ink-3);
+  }
+
+  .dot {
+    margin-left: 4px;
+  }
+}
+
+
+.sky {
+  grid-area: sky;
+  height: 2px;
+  margin-top: 7px;
+  border-radius: 1px;
+  opacity: 0.8;
+}

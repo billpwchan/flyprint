@@ -1,0 +1,147 @@
+.bar {
+  display: grid;
+  gap: 8px;
+}
+
+.caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  height: 22px;
+}
+
+.all {
+  margin-left: -8px;
+  padding: 2px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 140ms var(--ease), background-color 140ms var(--ease);
+}
+
+.all:hover {
+  color: var(--ink);
+}
+
+.all[aria-pressed="true"] {
+  color: var(--ink);
+}
+
+.readout {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.readout b {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.years {
+  position: relative;
+  display: flex;
+  height: 50px;
+}
+
+.year {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 1fr 14px;
+  gap: 4px;
+  padding: 0 1.5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.year:disabled {
+  cursor: default;
+}
+
+.column {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 0;
+}
+
+.column i {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 2px 2px 1px 1px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+  transition: background-color 160ms var(--ease);
+}
+
+
+.bar[data-all="true"] .column i {
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.year:hover:not(:disabled) .column i,
+.year:focus-visible .column i {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.year[aria-pressed="true"] .column i {
+  background: var(--ink);
+}
+
+
+.year small {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: var(--ink-4);
+  font-variant-numeric: tabular-nums;
+  transition: color 140ms var(--ease);
+}
+
+.year[aria-pressed="true"] small,
+.year:hover small {
+  color: var(--ink);
+}
+
+.year:focus-visible {
+  outline: none;
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  pointer-events: none;
+  transition: transform 200ms var(--ease);
+}
+
+.marker::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  margin-left: -5px;
+  border-radius: 1px;
+  background: var(--ink-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marker {
+    transition: none;
+  }
+}

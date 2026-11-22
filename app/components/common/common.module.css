@@ -1,0 +1,770 @@
+/* Pieces every screen shares: the section frame with its time bar, the
+   headline and figures, findings, trip rows, the detail header, the flight board. */
+
+.lens {
+  --lens-head: 118px;
+}
+
+.lensHead {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  height: var(--lens-head);
+  padding: 16px var(--gutter) 0;
+  background: var(--panel-solid);
+}
+
+/* What scrolls under a sticky head fades into it; no rule between them. */
+.lensHead::after,
+.groupHead::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 20px;
+  background: linear-gradient(var(--panel-solid), rgba(7, 8, 11, 0));
+  pointer-events: none;
+}
+
+.body {
+  padding: 22px var(--gutter) 32px;
+}
+
+.demo {
+  margin: 14px var(--gutter) -8px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.demo a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-4);
+  text-underline-offset: 3px;
+}
+
+.demo a:hover {
+  color: var(--ink);
+}
+
+.emptyArchive {
+  padding: 34px var(--gutter) 40px;
+}
+
+.emptyArchive p {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.emptyAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  margin-top: 26px;
+  padding: 0 20px;
+  border-radius: 21px;
+  background: var(--ink);
+  color: #07080b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: box-shadow 200ms var(--ease), transform 140ms var(--ease);
+}
+
+.emptyAction:hover {
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.18);
+}
+
+.emptyAction:active {
+  transform: scale(0.97);
+}
+
+.emptyAction svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.body[data-fade] {
+  animation: fade 200ms var(--ease) both;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.25;
+  }
+}
+
+.headline {
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.headRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lead {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.count {
+  font-size: 13px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Figures: four numbers in a row, no boxes. */
+
+/* Up to four figures in one row: a value never breaks or runs into the next;
+   when the row is tight, the labels wrap under their values instead. */
+.figures {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  gap: 12px 16px;
+  margin-top: 20px;
+}
+
+.figure {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+}
+
+.figure strong {
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.figure span {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--ink-3);
+}
+
+.sectionTitle {
+  padding-bottom: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.empty {
+  padding: 40px 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+/* A group header that sticks under the time bar while its rows scroll. */
+
+.groupHead {
+  position: sticky;
+  top: var(--lens-head);
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 calc(var(--gutter) * -1);
+  padding: 14px var(--gutter) 8px;
+  background: var(--panel-solid);
+}
+
+.groupHead h2 {
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.groupHead span {
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.group + .group {
+  margin-top: 8px;
+}
+
+/* Findings */
+
+.readings {
+  margin-top: 22px;
+}
+
+.readings li + li {
+  margin-top: 2px;
+}
+
+.reading {
+  display: grid;
+  gap: 3px;
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  padding: 12px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 140ms var(--ease);
+}
+
+.reading strong {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.reading > span {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.reading:hover {
+  background: var(--fill);
+}
+
+.reading[aria-pressed="true"] {
+  background: var(--fill-2);
+}
+
+.reading[aria-pressed="true"] > span {
+  color: var(--ink-2);
+}
+
+/* Column charts inside findings */
+
+.bars {
+  display: grid !important;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.barRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 32px;
+}
+
+.bar {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-radius: 2px 2px 1px 1px;
+  background: var(--ink-4);
+  overflow: hidden;
+}
+
+.bar[data-current="true"] {
+  background: var(--ink-2);
+}
+
+.barAxis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--ink-4);
+  font-variant-numeric: tabular-nums;
+}
+
+.barAxis[data-axis="all"] {
+  gap: 3px;
+}
+
+.barAxis[data-axis="all"] > span {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+/* Trip rows */
+
+.trip {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  padding: 8px 10px;
+  border-radius: 14px;
+  transition: background-color 140ms var(--ease);
+}
+
+.trip:hover {
+  background: var(--fill);
+}
+
+/* A row that opens nothing (someone's public page) only lights its routes. */
+.trip[data-still]:hover {
+  background: none;
+}
+
+.tripImage {
+  width: 48px;
+  height: 48px;
+}
+
+.tripMain {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.tripLine {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+}
+
+.tripMain strong {
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tripMain strong[data-quiet="true"] {
+  font-weight: 400;
+  color: var(--ink-2);
+}
+
+.tripDate {
+  flex: none;
+  font-size: 12px;
+  color: var(--ink-3);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tripFacts {
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tripSoon,
+.tripNote {
+  flex: none;
+  font-size: 12px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tripSoon {
+  color: var(--tone);
+}
+
+.tripNote {
+  color: var(--ink-3);
+}
+
+.owner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-2);
+}
+
+.owner i {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tone, var(--b));
+}
+
+a.owner {
+  text-decoration: none;
+  transition: color 160ms var(--ease);
+}
+
+a.owner:hover {
+  color: var(--ink);
+}
+
+/* Detail screens: back on the left, earlier and later on the right. */
+
+.detail {
+  padding: 14px var(--gutter) 32px;
+}
+
+.detailHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 36px;
+  margin-bottom: 14px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  margin-left: -8px;
+  padding: 6px 10px 6px 4px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--ink-2);
+  transition: color 140ms var(--ease), background-color 140ms var(--ease);
+}
+
+.back span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.back:hover {
+  color: var(--ink);
+  background: var(--fill);
+}
+
+.back svg {
+  flex: none;
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+.detailActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pager {
+  display: flex;
+  gap: 4px;
+}
+
+.pager a,
+.pager span {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: var(--ink-2);
+  transition: color 140ms var(--ease), background-color 140ms var(--ease), transform 140ms var(--ease);
+}
+
+.pager a:hover {
+  color: var(--ink);
+  background: var(--fill);
+}
+
+.pager a:active {
+  transform: scale(0.94);
+}
+
+.pager span {
+  color: var(--ink-4);
+  opacity: 0.5;
+}
+
+.pager svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+}
+
+/* Flight board */
+
+.board {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 14px;
+}
+
+.end {
+  display: grid;
+  gap: 1px;
+  min-width: 4.2em;
+}
+
+.end strong {
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.board[data-large="true"] .end strong {
+  font-size: 32px;
+}
+
+.end span {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.end time {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.board[data-large="true"] .end time {
+  font-size: 19px;
+}
+
+.end sup {
+  margin-left: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--t);
+  vertical-align: super;
+  line-height: 0;
+}
+
+.arrive {
+  justify-items: end;
+  text-align: right;
+}
+
+.path {
+  display: grid;
+  grid-template-rows: auto 1px auto;
+  justify-items: center;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.board[data-large="true"] .path {
+  padding-top: 10px;
+}
+
+.path i {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.path i::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  border-left: 6px solid var(--line-strong);
+  border-top: 3.5px solid transparent;
+  border-bottom: 3.5px solid transparent;
+}
+
+.path i[data-sky] {
+  height: 3px;
+  border-radius: 2px;
+}
+
+.path i[data-sky]::after {
+  top: -2px;
+  right: -5px;
+  border-left-color: var(--end);
+}
+
+/* Where a flight in the air is now, on its line. */
+.now {
+  position: absolute;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 0 0 0 3px var(--panel-solid), 0 0 12px rgba(255, 255, 255, 0.55);
+}
+
+.carrier {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.flightNo {
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.aircraft {
+  color: var(--ink-3);
+}
+
+@media (max-width: 760px) {
+  .lens {
+    --lens-head: 112px;
+  }
+
+  .lensHead {
+    padding-top: 12px;
+  }
+
+  .headline {
+    font-size: 23px;
+  }
+
+  .figure strong {
+    font-size: 17px;
+  }
+
+  .end strong {
+    font-size: 22px;
+  }
+
+  .board[data-large="true"] .end strong {
+    font-size: 28px;
+  }
+}
+
+/* A first visit: what this is, and the way in. */
+.intro {
+  padding: 22px var(--gutter) 2px;
+}
+
+.introLine {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.introActions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.introActions .emptyAction {
+  margin-top: 0;
+}
+
+.introQuiet {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color 140ms var(--ease);
+}
+
+.introQuiet:hover {
+  color: var(--ink);
+}
+
+/* A trial's one standing line: how long the map stays, and how to keep it. */
+.trial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px var(--gutter) 2px;
+}
+
+.trial p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.trial .emptyAction {
+  flex: none;
+  height: 36px;
+  margin-top: 0;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+/* Whose public page this is, in their colour. */
+.sharedBy {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  padding: 18px var(--gutter) 0;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+/* Whose map this is leads someone else's page. */
+.sharedBy strong {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.sharedBy i {
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+  border-radius: 50%;
+  background: var(--tone);
+  box-shadow: 0 0 10px var(--tone);
+}
+
+.sharedBy a {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-4);
+  text-underline-offset: 3px;
+}
+
+.outro {
+  padding: 36px var(--gutter) 40px;
+}

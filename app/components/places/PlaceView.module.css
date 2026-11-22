@@ -1,0 +1,116 @@
+.where {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 8px !important;
+  font-size: 14px !important;
+  color: var(--ink-3) !important;
+}
+
+.where b {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+}
+
+.airport {
+  display: grid;
+  gap: 10px;
+  padding: 14px 0 6px;
+}
+
+.airport + .airport {
+  margin-top: 6px;
+  box-shadow: inset 0 1px 0 var(--line);
+}
+
+.airport figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.airport figcaption b {
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+
+.airport figcaption span:first-of-type {
+  color: var(--ink-2);
+}
+
+.connections li + li {
+  box-shadow: inset 0 1px 0 var(--line);
+}
+
+.connections a {
+  display: grid;
+  grid-template-columns: minmax(5em, 9em) minmax(0, 1fr) 3em;
+  align-items: center;
+  gap: 14px;
+  width: calc(100% + 24px);
+  margin: 0 -12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color 160ms var(--ease);
+}
+
+.connections a:hover {
+  background: var(--fill);
+}
+
+.connectionName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.track {
+  height: 6px;
+}
+
+.track i {
+  display: block;
+  min-width: 3px;
+  height: 100%;
+  border-radius: 1px;
+  background: var(--ink-4);
+  transition: background-color 160ms var(--ease);
+}
+
+.connections a:hover .track i {
+  background: var(--ink-2);
+}
+
+.connectionCount {
+  text-align: right;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.more {
+  margin-top: 8px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  font-size: 13px;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 160ms var(--ease);
+}
+
+.more:hover {
+  color: var(--ink);
+}
+
+.lived {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+}

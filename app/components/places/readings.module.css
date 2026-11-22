@@ -1,0 +1,25 @@
+/* Pictures inside findings: the type flown most, the year's airline marks. */
+.drawing {
+  display: block;
+  width: min(100%, 300px);
+  margin: 10px 0 2px;
+}
+
+.marks {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 10px;
+}
+
+.marks > span {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+
+.marks small {
+  font-size: 11px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}

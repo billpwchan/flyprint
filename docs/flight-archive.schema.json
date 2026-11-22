@@ -1,0 +1,307 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Flyprint flight archive",
+  "description": "机场、日历日期、年份及旅客之间的关联由运行时进一步校验。",
+  "type": "object",
+  "required": [
+    "airports",
+    "flights"
+  ],
+  "properties": {
+    "generatedFrom": {
+      "type": "string",
+      "minLength": 1
+    },
+    "travellers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/traveller"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "airports": {
+      "type": "object",
+      "minProperties": 2,
+      "propertyNames": {
+        "pattern": "^[A-Z0-9]{3}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/airport"
+      }
+    },
+    "flights": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/flight"
+      }
+    },
+    "reconciliation": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "definitions": {
+    "traveller": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "accent"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "B",
+            "Z"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accent": {
+          "enum": [
+            "cyan",
+            "violet"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "airport": {
+      "type": "object",
+      "required": [
+        "name",
+        "code",
+        "city",
+        "country",
+        "coordinates"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "code": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]{3}$"
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1
+        },
+        "country": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinates": {
+          "type": "array",
+          "items": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            }
+          ],
+          "additionalItems": false,
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "additionalProperties": true
+    },
+    "aircraft": {
+      "type": "object",
+      "required": [
+        "model",
+        "icao",
+        "source",
+        "body"
+      ],
+      "properties": {
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "icao": {
+          "type": "string",
+          "minLength": 1
+        },
+        "registration": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "enum": [
+            "operated",
+            "scheduled",
+            "typical"
+          ]
+        },
+        "body": {
+          "enum": [
+            "widebody",
+            "narrowbody"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "registration"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source": {
+                "const": "operated"
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "flight": {
+      "type": "object",
+      "required": [
+        "id",
+        "date",
+        "year",
+        "airline",
+        "flight",
+        "origin",
+        "destination",
+        "depart",
+        "arrive",
+        "arrivalDayOffset",
+        "durationMinutes",
+        "timeSource",
+        "km",
+        "status",
+        "source",
+        "confidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "airline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "flight": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "depart": {
+          "type": "string",
+          "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$|^--:--$"
+        },
+        "arrive": {
+          "type": "string",
+          "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$|^--:--$"
+        },
+        "arrivalDayOffset": {
+          "type": "integer"
+        },
+        "durationMinutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "km": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "timeSource": {
+          "enum": [
+            "recorded",
+            "historical_schedule"
+          ]
+        },
+        "travellerId": {
+          "enum": [
+            "B",
+            "Z"
+          ]
+        },
+        "travellerIds": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "B",
+              "Z"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "aircraft": {
+          "$ref": "#/definitions/aircraft"
+        },
+        "operation": {
+          "type": "object",
+          "required": [
+            "airline",
+            "flight",
+            "source"
+          ],
+          "properties": {
+            "airline": {
+              "type": "string",
+              "minLength": 1
+            },
+            "flight": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source": {
+              "enum": [
+                "operated",
+                "scheduled"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

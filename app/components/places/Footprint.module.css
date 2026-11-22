@@ -1,0 +1,192 @@
+.section {
+  margin-top: 44px;
+}
+
+.head {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.head h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 400;
+}
+
+.head b {
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.head h2 span {
+  font-size: 15px;
+  color: var(--ink-2);
+}
+
+.head p {
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.coil {
+  display: block;
+  width: min(100%, 260px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.aloft {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+  gap: 2px;
+}
+
+.aloft i {
+  aspect-ratio: 1;
+  border-radius: 25%;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px 8px;
+}
+
+.countries button {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 10px 2px 8px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 140ms var(--ease);
+}
+
+.countries button:hover,
+.countries button[aria-pressed="true"] {
+  background: var(--fill);
+}
+
+.countries strong {
+  max-width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.countries small {
+  margin-top: -4px;
+  font-size: 11px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px 12px;
+}
+
+.cities li > * {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.cityImage {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  transition: transform 200ms var(--ease);
+}
+
+.cities a:hover .cityImage {
+  transform: scale(1.03);
+}
+
+.cities strong {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cities small {
+  margin-top: -5px;
+  font-size: 11px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cityImage {
+    transition: none;
+  }
+}
+
+.findings {
+  margin-top: 36px;
+}
+
+.part {
+  margin-top: 44px;
+}
+
+.part > section {
+  margin-top: 0;
+}
+
+.partHead {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.partHead h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 400;
+}
+
+.partHead b {
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.partHead h2 span {
+  font-size: 15px;
+  color: var(--ink-2);
+}
+
+.partHead p {
+  font-size: 12px;
+  color: var(--ink-3);
+}

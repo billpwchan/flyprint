@@ -1,0 +1,170 @@
+.when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The itinerary: times on the left, a rail between the two ends, the flight on the right. */
+
+.itinerary {
+  margin-top: 24px;
+}
+
+.day {
+  padding: 14px 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.itinerary li:first-child .day {
+  padding-top: 0;
+}
+
+.leg {
+  display: grid;
+  grid-template-columns: 3.1em 10px minmax(0, 1fr) auto;
+  align-items: stretch;
+  gap: 12px;
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 140ms var(--ease);
+}
+
+.leg:hover {
+  background: var(--fill);
+}
+
+.times,
+.ends,
+.meta {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 14px;
+  min-width: 0;
+}
+
+.times time {
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.times sup {
+  margin-left: 1px;
+  font-size: 9px;
+  color: var(--t);
+  line-height: 0;
+}
+
+/* Two stops joined by a line, the way a timetable draws a service. */
+.rail {
+  position: relative;
+}
+
+.rail::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--line-strong);
+}
+
+.rail i {
+  position: absolute;
+  left: 1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.rail i:first-child {
+  top: 6px;
+  box-shadow: inset 0 0 0 1.5px var(--ink-2);
+  background: var(--panel-solid);
+}
+
+.rail i:last-child {
+  bottom: 6px;
+  background: var(--ink);
+}
+
+.ends span {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.ends b {
+  flex: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.meta {
+  justify-items: end;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.number {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+}
+
+.gap {
+  margin: 2px 0 2px calc(3.1em + 12px);
+  padding: 4px 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.gap a {
+  display: inline-block;
+  margin-left: -8px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  transition: color 140ms var(--ease), background-color 140ms var(--ease);
+}
+
+.gap a:hover {
+  color: var(--ink);
+  background: var(--fill);
+}
+
+.gap[data-stay="true"] {
+  color: var(--ink-2);
+}
+
+/* The title, and the country it went to as its outline with the city lit. */
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}

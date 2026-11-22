@@ -1,0 +1,95 @@
+/* Light-drawn line art on the dark panel: a lit outline, a quiet fill that
+   hides what is behind it, fainter panel lines, pale cabin windows. */
+
+.profile {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  animation: arrive 480ms var(--ease) both;
+}
+
+.profile svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.profile[data-tentative="true"] svg {
+  opacity: 0.5;
+}
+
+.line {
+  fill: none;
+  stroke: rgba(228, 236, 247, 0.82);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.detail {
+  fill: none;
+  stroke: rgba(228, 236, 247, 0.26);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.glass {
+  fill: rgba(135, 174, 221, 0.2);
+  stroke: rgba(228, 236, 247, 0.5);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.window {
+  fill: rgba(232, 238, 246, 0.42);
+}
+
+/* Nose to tail, with end ticks; the figure sits in a gap in the line. */
+.dimension {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.dimension i {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.dimension i::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 7px;
+  background: var(--line-strong);
+}
+
+.dimension i:first-child::before {
+  left: 0;
+}
+
+.dimension i:last-child::before {
+  right: 0;
+}
+
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile {
+    animation: none;
+  }
+}

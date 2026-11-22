@@ -1,0 +1,44 @@
+.mark {
+  display: block;
+  flex: none;
+  overflow: visible;
+}
+
+/* The outline is also stroked, so a country of small islands still shows. */
+.land,
+.landQuiet {
+  fill: var(--mark);
+  stroke: var(--mark);
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 2px color-mix(in srgb, var(--mark) 55%, transparent));
+}
+
+.land {
+  opacity: 0.9;
+}
+
+.landQuiet {
+  opacity: 0.55;
+}
+
+.around {
+  fill: var(--mark);
+  opacity: 0.2;
+}
+
+.ring {
+  fill: none;
+  stroke: var(--mark);
+  stroke-width: 2.4;
+  opacity: 0.75;
+}
+
+.halo {
+  fill: #fff;
+  opacity: 0.35;
+}
+
+.city {
+  fill: #fff;
+}
