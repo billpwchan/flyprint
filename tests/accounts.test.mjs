@@ -76,6 +76,19 @@ const usersTable = () => new DatabaseSync(join(process.env.FLYPRINT_DATA_DIR, "w
 
 const page = async (path, cookie) => (await fetch(`${origin}${path}`, { headers: { cookie, "accept-language": "zh-CN" }, redirect: "manual" })).text();
 
+// First in the file: names learned in one reader's import are cached once the
+// server first reads them, so this row has to be in place before that.
+test("airport search never shows a name learned from someone's import", async () => {
+  await api("/api/auth/logout", { method: "POST" });
+  const db = usersTable();
+  db.prepare("INSERT INTO names (kind, code, value) VALUES ('place', 'ACK', ?)").run(JSON.stringify({ city: ["学来的城", "學來的城", "Learned City"], name: ["学来的机场", "學來的機場", "Learned Airport"] }));
+  db.close();
+  const found = await api("/api/airports?q=ACK");
+  const ack = found.data.airports.find((match) => match.code === "ACK");
+  assert.ok(ack, "the airport is still found by its code");
+  assert.doesNotMatch(JSON.stringify(ack), /学来的|學來的|Learned/);
+});
+
 test("settings ask a visitor to sign in first; importing does not", async () => {
   const response = await fetch(`${origin}/settings`, { redirect: "manual" });
   assert.equal(response.status, 307);

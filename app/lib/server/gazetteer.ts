@@ -96,11 +96,14 @@ function builtPlaceNames(code: string, city: string, name: string) {
   return { city: [row[0] || city, row[1] || row[0] || city, city] as Names, name: [row[2] || name, row[3] || row[2] || name, name] as Names };
 }
 
-export function placeFor(code: string): Place | null {
+// learned: also use names the model gave during someone's import. Search,
+// which anyone can run on any code, leaves them out: a name in the model's
+// style would say that somebody has flown there.
+export function placeFor(code: string, learned = true): Place | null {
   const info = airport(code);
   if (!info) return null;
   const city = info.city || info.name;
-  const names = curatedPlaces[code] ?? (generatedPlaces[code]?.[0] ? builtPlaceNames(code, city, info.name) : null) ?? learnedNames().places.get(code) ?? builtPlaceNames(code, city, info.name);
+  const names = curatedPlaces[code] ?? (generatedPlaces[code]?.[0] ? builtPlaceNames(code, city, info.name) : null) ?? (learned ? learnedNames().places.get(code) : undefined) ?? builtPlaceNames(code, city, info.name);
   return {
     city: names?.city ?? [city, city, city],
     name: names?.name ?? [info.name, info.name, info.name],

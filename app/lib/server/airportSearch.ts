@@ -37,7 +37,7 @@ function entries(): Entry[] {
   if (index) return index;
   const built: Entry[] = [];
   for (const code of codes) {
-    const place = placeFor(code);
+    const place = placeFor(code, false);
     if (!place) continue;
     const longest = Math.max(0, ...(runways[code] ?? []).map((runway) => Number(runway[7]) || 0));
     const home = airportOfMetro(metroOf(code)) === code && metroOf(code) !== code;
