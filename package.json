@@ -31,9 +31,9 @@
     "lights": "node scripts/build-lights.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^1.10.0",
+    "@anthropic-ai/sdk": "^1.11.0",
     "d3-geo": "^3.1.2",
-    "lucide-react": "^1.75.0",
+    "lucide-react": "^1.76.0",
     "maplibre-gl": "^6.19.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
