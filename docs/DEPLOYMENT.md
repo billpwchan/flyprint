@@ -86,7 +86,7 @@ Compose 模板把根文件系统设为只读，只有数据卷和 `/tmp` 可写�
 
 ## HTTPS 与 CSP
 
-`deploy/lightsail/Caddyfile.example` 是站点片段模板，请替换域名并通过适合你主机的网关配置安装。应用与代理需要同时传递每次请求的 nonce：代理向应用发送 `X-Nonce` 和 CSP 请求头，响应也必须发出相同的 CSP 策略。不能仅设置内部请求头后假定浏览器受到 CSP 保护。
+`deploy/lightsail/Caddyfile.example` 是站点片段模板，请替换域名并通过适合你主机的网关配置安装。应用与代理需要同时传递每次请求的 nonce：代理向应用发送 `X-Nonce` 和 CSP 请求头，响应也必须发出相同的 CSP 策略。不能仅设置内部请求头后假定浏览器受到 CSP 保护。年份短片在本机生成后以 `blob:` 地址播放，策略里要有 `media-src 'self' blob:`，否则预览里的视频会被拦下。
 
 注册、登录和找回密码按来访网络限次，网络地址取代理追加在 `X-Forwarded-For` 末尾的那一项，所以代理必须追加对端地址（Caddy 默认如此）。站点放在 Cloudflare 代理后面时，这一项是 Cloudflare 的边缘地址，应用改用 `CF-Connecting-IP`；只有末项落在 Cloudflare 公布的地址段内才采信这个请求头，别处发来的一律忽略。地址段写在 `app/lib/server/http.ts`，Cloudflare 更新 [cloudflare.com/ips](https://www.cloudflare.com/ips/) 时同步修改。Cloudflare 侧请关闭 Rocket Loader、Email Obfuscation 和自动注入的 Web Analytics：它们往页面里插脚本，会被 CSP 拦下。
 

@@ -475,7 +475,8 @@ test("a public page shows only flown routes, to anyone with its link, until it i
   const own = await page("/", cookie);
   for (const probe of ["47K", "9917", "9918"]) assert.match(own, new RegExp(probe), `the owner's own page carries ${probe}, so its absence below means something`);
   assert.doesNotMatch(shared, /47K|Business|商务舱|9917/, "no seat, cabin or flight still ahead reaches the page");
-  assert.doesNotMatch(shared, /9918/, "a flight that landed yesterday does not say where its owner is now");
+  // Digits inside a longer number (a timestamp in the page data) are not the flight.
+  assert.doesNotMatch(shared, /(?<!\d)9918(?!\d)/, "a flight that landed yesterday does not say where its owner is now");
   const image = await fetch(`${origin}/api/share/${slug}/image`);
   assert.equal(image.headers.get("content-type"), "image/png");
   assert.ok((await image.arrayBuffer()).byteLength > 10_000);

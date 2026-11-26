@@ -59,7 +59,11 @@ type Copy = {
     airlineJoin: (name: string, count: string) => string;
   };
   // The picture of a year, trip or flight made to be sent, shown before it goes.
-  cards: { open: string; share: string; save: string; copy: string; copied: string; making: string; hold: string; failed: string; close: string };
+  cards: {
+    open: string; share: string; save: string; copy: string; copied: string; making: string; hold: string; failed: string; close: string;
+    // The year card also comes as a short film.
+    kinds: string; picture: string; video: string; shareVideo: string; saveVideo: string; makingVideo: (percent: string) => string; videoReady: string; videoHold: string; videoFailed: string;
+  };
   places: {
     hero: (countries: string, cities: string) => string;
     yearHero: (year: number, countries: string, cities: string) => string;
@@ -243,7 +247,9 @@ const hans: Copy = {
     countryLine: (cities, arrivals) => `${cities} 座城市 · 到达 ${arrivals} 次`,
     arrivals: "到达",
     first: "首次",
-  },  cards: { open: "分享图片", share: "分享图片", save: "保存图片", copy: "复制图片", copied: "已复制", making: "正在生成", hold: "长按图片保存", failed: "这张图没能生成", close: "关闭" },
+  },  cards: { open: "分享图片", share: "分享图片", save: "保存图片", copy: "复制图片", copied: "已复制", making: "正在生成", hold: "长按图片保存", failed: "这张图没能生成", close: "关闭",
+    kinds: "图片或视频", picture: "图片", video: "视频", shareVideo: "分享视频", saveVideo: "保存视频", makingVideo: (percent) => `正在生成视频 ${percent}`, videoReady: "视频生成好了",
+    videoHold: "要保存视频，请点右上角，在浏览器打开", videoFailed: "这段视频没能生成" },
 
   place: {
     notFound: "档案里没有这座城市",
@@ -399,7 +405,9 @@ const hant: Copy = {
     countryLine: (cities, arrivals) => `${cities} 座城市 · 到達 ${arrivals} 次`,
     arrivals: "到達",
     first: "首次",
-  },  cards: { open: "分享圖片", share: "分享圖片", save: "儲存圖片", copy: "複製圖片", copied: "已複製", making: "正在產生", hold: "長按圖片儲存", failed: "這張圖沒能產生", close: "關閉" },
+  },  cards: { open: "分享圖片", share: "分享圖片", save: "儲存圖片", copy: "複製圖片", copied: "已複製", making: "正在產生", hold: "長按圖片儲存", failed: "這張圖沒能產生", close: "關閉",
+    kinds: "圖片或影片", picture: "圖片", video: "影片", shareVideo: "分享影片", saveVideo: "儲存影片", makingVideo: (percent) => `正在產生影片 ${percent}`, videoReady: "影片產生好了",
+    videoHold: "要儲存影片，請點右上角，在瀏覽器開啟", videoFailed: "這段影片沒能產生" },
 
   place: {
     notFound: "檔案裡沒有這座城市",
@@ -564,7 +572,9 @@ const en: Copy = {
     countryLine: (cities, arrivals) => `${plural(cities, "1 city", `${cities} cities`)} · ${plural(arrivals, "1 arrival", `${arrivals} arrivals`)}`,
     arrivals: "Arrivals",
     first: "First",
-  },  cards: { open: "Share image", share: "Share image", save: "Save image", copy: "Copy image", copied: "Copied", making: "Making the picture", hold: "Press and hold the picture to save it", failed: "This picture couldn’t be made", close: "Close" },
+  },  cards: { open: "Share image", share: "Share image", save: "Save image", copy: "Copy image", copied: "Copied", making: "Making the picture", hold: "Press and hold the picture to save it", failed: "This picture couldn’t be made", close: "Close",
+    kinds: "Image or video", picture: "Image", video: "Video", shareVideo: "Share video", saveVideo: "Save video", makingVideo: (percent) => `Making the video · ${percent}`, videoReady: "The video is ready",
+    videoHold: "To save the video, open this page in your browser from the menu at the top right", videoFailed: "This video couldn’t be made" },
 
   place: {
     notFound: "This city isn’t in the archive",

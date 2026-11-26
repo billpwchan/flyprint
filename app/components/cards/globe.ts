@@ -14,7 +14,7 @@ const FOCAL = CARD.height / 2 / Math.tan(FOV / 2);
 const NEAREST = 1.6;
 
 export type ArcSpec = { from: LngLat; to: LngLat; bow: number; color: string; alpha: number; width: number };
-export type DotSpec = { at: LngLat; radius: number; alpha: number };
+export type DotSpec = { code: string; at: LngLat; radius: number; alpha: number };
 export type Camera = { center: LngLat; distance: number };
 export type Still = {
   arcs: ArcSpec[];
@@ -180,6 +180,9 @@ export function loadWorld() {
 
 const rgba = ([r, g, b]: number[], a: number) => `rgba(${r}, ${g}, ${b}, ${a})`;
 
+// Pixels per point on this canvas: 4 for a printed card, 3 for a film's frames.
+export const pixelsOf = (ctx: CanvasRenderingContext2D) => ctx.getTransform().a;
+
 // Light from the camera: full where the ground faces it, quieter toward the
 // edge; a ray through a point a share `s` of the disc's radius out meets the
 // ground facing the camera by this much.
@@ -193,7 +196,16 @@ function facingAt(s: number, distance: number) {
 }
 
 export async function drawStill(ctx: CanvasRenderingContext2D, still: Still) {
+  const view = await drawGround(ctx, still);
+  drawArcs(ctx, still, view);
+  drawDots(ctx, still, view);
+  return view;
+}
+
+// The planet alone: ocean, land, the air around it and the world's airports.
+export async function drawGround(ctx: CanvasRenderingContext2D, still: Pick<Still, "camera" | "middle">) {
   const { land, coast, borders, lights } = await loadWorld();
+  const px = pixelsOf(ctx);
   const { camera, middle } = still;
   const view = viewOf(camera, middle);
   const projection = groundProjection(camera, middle);
@@ -227,7 +239,7 @@ export async function drawStill(ctx: CanvasRenderingContext2D, still: Still) {
   path(coast);
   ctx.save();
   ctx.shadowColor = rgba(COLORS.shore, 0.5);
-  ctx.shadowBlur = 5 * CARD.scale;
+  ctx.shadowBlur = 5 * px;
   ctx.strokeStyle = rgba(COLORS.shore, 0.06);
   ctx.lineWidth = 2.4;
   ctx.stroke();
@@ -279,25 +291,32 @@ export async function drawStill(ctx: CanvasRenderingContext2D, still: Still) {
   }
   ctx.globalAlpha = 1;
   ctx.restore();
+  ctx.restore();
+  return view;
+}
 
-  drawArcs(ctx, still, view);
+type View = ReturnType<typeof viewOf>;
 
-  // The airports flown from and to.
-  ctx.globalCompositeOperation = "source-over";
+// The airports flown from and to; `lit` says how far each has come on (its
+// light, and how much larger it shows as it first lights).
+export function drawDots(ctx: CanvasRenderingContext2D, still: Still, view: View, lit?: (spec: DotSpec) => [number, number]) {
+  const px = pixelsOf(ctx);
   for (const spec of still.dots) {
+    const [alpha, swell] = lit ? lit(spec) : [1, 1];
+    if (alpha <= 0) continue;
     const point = view.project(scale(toVector(spec.at), 1.001));
     if (!point) continue;
+    const radius = spec.radius * swell;
     ctx.save();
+    ctx.globalCompositeOperation = "source-over";
     ctx.shadowColor = "rgba(255, 255, 255, 0.6)";
-    ctx.shadowBlur = spec.radius * 2 * CARD.scale;
+    ctx.shadowBlur = radius * 2 * px;
     ctx.beginPath();
-    ctx.arc(point[0], point[1], spec.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(238, 240, 242, ${spec.alpha})`;
+    ctx.arc(point[0], point[1], radius, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(238, 240, 242, ${spec.alpha * alpha})`;
     ctx.fill();
     ctx.restore();
   }
-  ctx.restore();
-  return view;
 }
 
 let sprite: HTMLCanvasElement | null = null;
@@ -326,70 +345,97 @@ const erf = (x: number) => {
 };
 const smooth = (a: number, b: number, x: number) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
-function drawArcs(ctx: CanvasRenderingContext2D, still: Still, { project, disc }: ReturnType<typeof viewOf>) {
-  if (!still.arcs.length) return;
-  const strength = (t: number) => (still.directed ? 0.38 + 0.62 * t : 1) * (0.22 + 0.78 * smooth(0, 0.1, Math.min(t, 1 - t)));
-  // Toward the planet's edge a line fades (a year's lines more than one
-  // flight's), and gone past it, where it would hang in the air.
+// How bright a line is at each point along it (0 at take-off, 1 at landing).
+export const levelOf = (still: Pick<Still, "directed">) => (t: number) => (still.directed ? 0.38 + 0.62 * t : 1) * (0.22 + 0.78 * smooth(0, 0.1, Math.min(t, 1 - t)));
+
+// A flight's line as the card sees it, worked out once: each point where it
+// lands on the card (null behind the planet), and how much of its light is
+// left there toward the planet's edge (a year's lines fade more than one
+// flight's) or gone past it, where it would hang in the air.
+export type Traced = { arc: ArcSpec; points: ([number, number] | null)[]; limb: number[] };
+export function traceArcs(still: Still, { project, disc }: View): Traced[] {
   const edge = still.directed ? 0.35 : 1;
   const limb = (point: [number, number]) => {
     const outline = Math.hypot(point[0] - still.middle[0], point[1] - still.middle[1]) / disc;
     return (1 - smooth(0.97, 1.03, outline)) * (1 - 0.55 * edge + 0.55 * edge * (1 - smooth(0.7, 0.97, outline)));
   };
-  // Every flight into one layer, lines adding where they cross; within a line
-  // the pieces meet end to end, so nothing is lit twice.
-  const layer = document.createElement("canvas");
-  layer.width = ctx.canvas.width;
-  layer.height = ctx.canvas.height;
-  const l = layer.getContext("2d")!;
-  l.setTransform(ctx.getTransform());
-  l.globalCompositeOperation = "lighter";
-  l.lineCap = "butt";
-  l.lineJoin = "round";
-  for (const arc of still.arcs) {
-    const path = arcPath(arc.from, arc.to, arc.bow);
-    l.strokeStyle = arc.color;
-    l.lineWidth = arc.width;
-    let piece: [number, number][] = [], level = -1;
-    const flush = () => {
-      if (piece.length > 1) {
-        l.globalAlpha = arc.alpha * level;
-        l.beginPath();
-        l.moveTo(piece[0][0], piece[0][1]);
-        for (const point of piece.slice(1)) l.lineTo(point[0], point[1]);
-        l.stroke();
-      }
-    };
-    path.forEach((p, index) => {
-      const point = project(p);
-      if (!point) { flush(); piece = []; level = -1; return; }
-      const here = strength(index / (path.length - 1)) * limb(point);
-      if (level >= 0 && Math.abs(here - level) > 0.02) {
-        const last = piece.at(-1);
-        flush();
-        piece = last ? [last] : [];
-        level = here;
-      }
-      if (level < 0) level = here;
-      piece.push(point);
-    });
-    flush();
+  return still.arcs.map((arc) => {
+    const points = arcPath(arc.from, arc.to, arc.bow).map(project);
+    return { arc, points, limb: points.map((point) => point ? limb(point) : 0) };
+  });
+}
+
+// One line into a layer, as far as `reach` of the way along it, each stretch
+// at the level `level` gives it; pieces meet end to end, so nothing is lit
+// twice. Returns where the line has got to and the box it was drawn in.
+export function strokeArc(l: CanvasRenderingContext2D, { arc, points, limb }: Traced, level: (t: number) => number, reach = 1, alpha = arc.alpha) {
+  const last = points.length - 1;
+  const end = Math.min(1, reach) * last;
+  if (last < 1 || end <= 0) return { head: null, box: null };
+  l.strokeStyle = arc.color;
+  l.lineWidth = arc.width;
+  let piece: [number, number][] = [], at = -1;
+  let head: [number, number] | null = null;
+  const box = [Infinity, Infinity, -Infinity, -Infinity];
+  const flush = () => {
+    if (piece.length > 1) {
+      l.globalAlpha = alpha * at;
+      l.beginPath();
+      l.moveTo(piece[0][0], piece[0][1]);
+      for (const point of piece.slice(1)) l.lineTo(point[0], point[1]);
+      l.stroke();
+    }
+  };
+  for (let index = 0; index <= Math.ceil(end); index++) {
+    let point = points[index];
+    let t = index / last;
+    // The tip, part of the way to the next point.
+    if (index > end) {
+      const before = points[index - 1], share = end - (index - 1);
+      point = point && before ? [before[0] + (point[0] - before[0]) * share, before[1] + (point[1] - before[1]) * share] : null;
+      t = end / last;
+    }
+    head = point;
+    if (!point) { flush(); piece = []; at = -1; continue; }
+    box[0] = Math.min(box[0], point[0]); box[1] = Math.min(box[1], point[1]);
+    box[2] = Math.max(box[2], point[0]); box[3] = Math.max(box[3], point[1]);
+    const here = level(t) * limb[index];
+    if (at >= 0 && Math.abs(here - at) > 0.02) {
+      const before = piece.at(-1);
+      flush();
+      piece = before ? [before] : [];
+      at = here;
+    }
+    if (at < 0) at = here;
+    piece.push(point);
   }
+  flush();
+  return { head, box: box[0] <= box[2] ? box as [number, number, number, number] : null };
+}
+
+// A layer of line cores (in pixels, the same size as the card's canvas) laid
+// on the card as light: its halo, as bright at a line's middle as the app's
+// (glowGain) whatever the line's width, then the core itself. `box`, in
+// pixels, keeps the work to where the lines are.
+export function lightArcs(ctx: CanvasRenderingContext2D, layer: HTMLCanvasElement, still: Still, box?: [number, number, number, number]) {
+  if (!still.arcs.length) return;
   const width = still.arcs[0].width, sigma = still.glow * 0.42;
   const color = still.arcs[0].color;
+  const px = pixelsOf(ctx);
+  const [x, y, w, h] = box ?? [0, 0, layer.width, layer.height];
+  if (w <= 0 || h <= 0) return;
   ctx.save();
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  // The halo: only the layer's blurred shadow, as bright at a line's middle as
-  // the app's (glowGain), whatever the line's width.
+  // Only the layer's blurred shadow is drawn: the layer itself is put far off the card.
   const away = 4000;
   ctx.globalCompositeOperation = "lighter";
   ctx.shadowColor = color;
-  ctx.shadowBlur = 2 * sigma * CARD.scale;
+  ctx.shadowBlur = 2 * sigma * px;
   ctx.shadowOffsetX = away;
   let gain = still.glowGain / Math.max(0.05, erf(width / (2 * Math.SQRT2 * sigma)));
   while (gain > 0.001) {
     ctx.globalAlpha = Math.min(1, gain);
-    ctx.drawImage(layer, -away, 0);
+    ctx.drawImage(layer, x, y, w, h, x - away, y, w, h);
     gain -= 1;
   }
   ctx.shadowColor = "transparent";
@@ -398,11 +444,34 @@ function drawArcs(ctx: CanvasRenderingContext2D, still: Still, { project, disc }
   // The core: 45% laid over what is under it, 55% added to it.
   ctx.globalCompositeOperation = "source-over";
   ctx.globalAlpha = 0.45;
-  ctx.drawImage(layer, 0, 0);
+  ctx.drawImage(layer, x, y, w, h, x, y, w, h);
   ctx.globalCompositeOperation = "lighter";
   ctx.globalAlpha = 0.55;
-  ctx.drawImage(layer, 0, 0);
+  ctx.drawImage(layer, x, y, w, h, x, y, w, h);
   ctx.restore();
+}
+
+// A canvas the size of `ctx`'s, drawing in the same points.
+export function layerLike(ctx: CanvasRenderingContext2D) {
+  const layer = document.createElement("canvas");
+  layer.width = ctx.canvas.width;
+  layer.height = ctx.canvas.height;
+  const l = layer.getContext("2d")!;
+  l.setTransform(ctx.getTransform());
+  return { layer, l };
+}
+
+// Every flight's line into one layer, lines adding where they cross, then
+// laid on the card as light.
+function drawArcs(ctx: CanvasRenderingContext2D, still: Still, view: View) {
+  if (!still.arcs.length) return;
+  const { layer, l } = layerLike(ctx);
+  l.globalCompositeOperation = "lighter";
+  l.lineCap = "butt";
+  l.lineJoin = "round";
+  const level = levelOf(still);
+  for (const traced of traceArcs(still, view)) strokeArc(l, traced, level);
+  lightArcs(ctx, layer, still);
   layer.width = layer.height = 0;
 }
 

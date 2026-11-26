@@ -7,13 +7,14 @@ import { brandName, carrierName, type Locale } from "../../lib/i18n";
 import { MARK } from "../../lib/mark.mjs";
 import { bowsOf, sideOf } from "../../lib/network";
 import { toneColor } from "../../lib/palette";
-import { airportOfMetro, cityOf, coordinatesOf, countriesIn, metroOf, positionOf } from "../../lib/places";
+import { airportOfMetro, cityOf, coordinatesOf, countriesIn, countryOf, metroOf, positionOf } from "../../lib/places";
 import { residenceOf } from "../../lib/residence";
 import type { Trip } from "../../lib/trips";
 import { aircraftType } from "../../lib/aircraft/catalog";
 import { draw as drawAircraft } from "../../lib/aircraft/profile";
 import type { LngLat } from "../../lib/geo";
-import { arcPath, CARD, drawStill, frame, loadWorld, projector, viewOf, type ArcSpec, type DotSpec, type Still } from "./globe";
+import { arcPath, CARD, drawDots, drawGround, drawStill, frame, layerLike, levelOf, lightArcs, loadWorld, pixelsOf, projector, strokeArc, traceArcs, viewOf, type ArcSpec, type DotSpec, type Still, type Traced } from "./globe";
+import { ARC_SETTLE, ease, flown, FPS, planFilm, ramp, travelOrder } from "./timeline";
 
 // Pictures made to be sent: a year (or every year), a trip, a flight. Each is
 // the night globe with the flights drawn as light, and time in the air shown
@@ -85,13 +86,13 @@ function measure(ctx: Ctx, value: string, size: number, weight: number, tracking
 // what is under it, so neighbouring glows join without seams; or laid over it,
 // where many marks stand close and their light must not pile up.
 function glow(ctx: Ctx, shape: () => void, color: string, blur: number, strength: number, added = true) {
-  const away = 4000;
+  const away = 4000, px = pixelsOf(ctx);
   ctx.save();
   ctx.globalCompositeOperation = added ? "lighter" : "source-over";
   ctx.shadowColor = color;
-  ctx.shadowBlur = blur * 2 * CARD.scale;
-  ctx.shadowOffsetX = away * CARD.scale;
-  ctx.globalAlpha = strength;
+  ctx.shadowBlur = blur * 2 * px;
+  ctx.shadowOffsetX = away * px;
+  ctx.globalAlpha *= strength;
   ctx.translate(-away, 0);
   // Opaque, so the light's strength is the colour's own alpha alone.
   ctx.fillStyle = "#fff";
@@ -123,7 +124,7 @@ function glowAlong(ctx: Ctx, stops: Stops, from: [number, number], to: [number, 
 // into a layer, blurred by halving it a few times and stretching it back
 // (canvas filters aren't in every browser), then laid over the card.
 function soft(ctx: Ctx, box: [number, number, number, number], sigma: number, strength: number, draw: (layer: CanvasRenderingContext2D) => void) {
-  const s = CARD.scale, pad = sigma * 3;
+  const s = pixelsOf(ctx), pad = sigma * 3;
   const halvings = Math.max(1, Math.round(Math.log2((sigma * s) / 0.7)));
   const k = 2 ** halvings;
   const w = Math.ceil(((box[2] + pad * 2) * s) / k) * k, h = Math.ceil(((box[3] + pad * 2) * s) / k) * k;
@@ -146,7 +147,7 @@ function soft(ctx: Ctx, box: [number, number, number, number], sigma: number, st
     layer = next;
   }
   ctx.save();
-  ctx.globalAlpha = strength;
+  ctx.globalAlpha *= strength;
   ctx.imageSmoothingQuality = "high";
   ctx.drawImage(layer, x, y, w / s, h / s);
   ctx.restore();
@@ -193,7 +194,11 @@ function header(ctx: Ctx, locale: Locale, right: string) {
   const middle = HEADER.top + HEADER.height / 2;
   brandMark(ctx, CARD.margin, HEADER.top, 17);
   text(ctx, brandName[locale], CARD.margin + 23, middle + 3.5, 10, 600, 0.92);
-  text(ctx, right, CARD.width - CARD.margin, middle + 2.8, 8, 500, 0.42, "right");
+  headerRight(ctx, right, 0.42);
+}
+
+function headerRight(ctx: Ctx, right: string, alpha: number) {
+  text(ctx, right, CARD.width - CARD.margin, HEADER.top + HEADER.height / 2 + 2.8, 8, 500, alpha, "right");
 }
 
 // The canonical address, not whichever host this page happens to be open on.
@@ -248,13 +253,16 @@ function traced(still: Still) {
   return points;
 }
 
+type Placed = { code: string; text: string; x: number; baseline: number; size: number; weight: number; alpha: number };
+
 // Each name beside its city where it fits: right, left, above, below; clear of
 // the names already placed and of the card's own text, and off the flights'
 // lines where any side allows it.
-function names(ctx: Ctx, wanted: Wanted[], still: Still, avoid: Box[], limit: number) {
+function placeNames(ctx: Ctx, wanted: Wanted[], still: Still, avoid: Box[], limit: number) {
   const project = projector(still);
   const taken = [...avoid];
   const line = traced(still);
+  const placed: Placed[] = [];
   let count = 0;
   const hits = (a: Box, b: Box) => a[0] < b[2] && a[2] > b[0] && a[1] < b[3] && a[3] > b[1];
   const crossed = (box: Box) => line.some(([x, y]) => x > box[0] && x < box[2] && y > box[1] && y < box[3]);
@@ -272,14 +280,29 @@ function names(ctx: Ctx, wanted: Wanted[], still: Still, avoid: Box[], limit: nu
     if (pick) {
       const { x, y, box } = pick;
       taken.push(box, [dot[0] - 3, dot[1] - 3, dot[0] + 3, dot[1] + 3]);
-      ctx.save();
-      ctx.shadowColor = "rgba(0, 0, 0, 0.9)";
-      ctx.shadowBlur = 2.5 * 2 * CARD.scale;
-      text(ctx, item.text, x, y - h / 2 + ascent(size) - (h - size * 1.193) / 2, size, weight, item.strong ? 0.92 : 0.66, "center");
-      ctx.restore();
+      placed.push({ code: item.code, text: item.text, x, baseline: y - h / 2 + ascent(size) - (h - size * 1.193) / 2, size, weight, alpha: item.strong ? 0.92 : 0.66 });
       count++;
     }
   }
+  return placed;
+}
+
+function drawNames(ctx: Ctx, placed: Placed[], shown: (name: Placed) => number = () => 1) {
+  const px = pixelsOf(ctx);
+  for (const name of placed) {
+    const alpha = shown(name);
+    if (alpha <= 0) continue;
+    ctx.save();
+    ctx.globalAlpha *= alpha;
+    ctx.shadowColor = "rgba(0, 0, 0, 0.9)";
+    ctx.shadowBlur = 2.5 * 2 * px;
+    text(ctx, name.text, name.x, name.baseline, name.size, name.weight, name.alpha, "center");
+    ctx.restore();
+  }
+}
+
+function names(ctx: Ctx, wanted: Wanted[], still: Still, avoid: Box[], limit: number) {
+  drawNames(ctx, placeNames(ctx, wanted, still, avoid, limit));
 }
 
 const bands = (top: number, bottom: number): Box[] => [[0, 0, CARD.width, top], [0, bottom - 4, CARD.width, CARD.height]];
@@ -296,7 +319,7 @@ function still(flights: Flight[], owner: Person, top: number, bottom: number, di
   for (const flight of flights) for (const code of [flight.origin, flight.destination]) visits.set(code, (visits.get(code) ?? 0) + 1);
   const dots: DotSpec[] = [...visits].flatMap(([code, count]) => {
     const at = positionOf(code);
-    return at ? [{ at, radius: directed ? 2.2 : count >= 10 ? 1.9 : 1.4, alpha: directed ? 1 : 0.8 }] : [];
+    return at ? [{ code, at, radius: directed ? 2.2 : count >= 10 ? 1.9 : 1.4, alpha: directed ? 1 : 0.8 }] : [];
   });
   const middle: [number, number] = [CARD.width / 2, (top + bottom) / 2 + 2];
   return { arcs, dots, camera: frame(arcs, middle, (bottom - top) / 2 - 6), middle, directed, glow: directed ? 6 : 5, glowGain: directed ? 0.24 : 0.2 };
@@ -347,27 +370,27 @@ function sunsRight(ctx: Ctx, line: string | null, baseline: number) {
 
 // MARK: A year
 
-type Mark = { minutes: number; stops: Stops; suns: number[] };
+type Mark = { flight: number; minutes: number; stops: Stops; suns: number[] };
 
 const DAY = 86_400_000;
 const dayIndex = (from: string, date: string) => Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / DAY);
 
 function yearStory(flown: Flight[], year: number | null, locale: Locale) {
-  const flights = flown.filter((flight) => sideOf(flight) !== "them" && (year === null || flight.year === year))
-    .sort((a, b) => a.date.localeCompare(b.date) || a.depart.localeCompare(b.depart));
+  const flights = flown.filter((flight) => sideOf(flight) !== "them" && (year === null || flight.year === year)).sort(travelOrder);
   const years = [...new Set(flights.map((flight) => flight.year))].sort((a, b) => a - b);
   const firstYear = year ?? years[0] ?? new Date().getUTCFullYear(), lastYear = year ?? years.at(-1) ?? firstYear;
   const start = `${firstYear}-01-01`;
   let sunrises = 0, sunsets = 0;
+  const skies = flights.map(skyOf);
   const byDay = new Map<number, Mark[]>();
-  for (const flight of flights) {
-    const sky = skyOf(flight);
+  flights.forEach((flight, index) => {
+    const sky = skies[index];
     for (const event of sky?.events ?? []) if (event.kind === "sunrise") sunrises++; else sunsets++;
     const day = dayIndex(start, flight.date);
     const list = byDay.get(day) ?? [];
-    list.push({ minutes: flight.durationMinutes, stops: skyStops(sky), suns: (sky?.events ?? []).map((event) => event.minute / Math.max(1, flight.durationMinutes)) });
+    list.push({ flight: index, minutes: flight.durationMinutes, stops: skyStops(sky), suns: (sky?.events ?? []).map((event) => event.minute / Math.max(1, flight.durationMinutes)) });
     byDay.set(day, list);
-  }
+  });
   const days = dayIndex(start, `${lastYear + 1}-01-01`);
   const ticks: [number, string][] = year === null
     ? Array.from({ length: Math.floor((lastYear - firstYear) / (lastYear - firstYear > 11 ? 2 : 1)) + 1 }, (_, i) => {
@@ -381,7 +404,7 @@ function yearStory(flown: Flight[], year: number | null, locale: Locale) {
   const homes = new Set(residenceOf(flown).homes.filter((home) => home.from <= end && (home.to ?? "9999") >= start).map((home) => metroOf(home.code)));
   const places = [...visits].sort((a, b) => Number(homes.has(b[0])) - Number(homes.has(a[0])) || b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).map(([code]) => code);
   return {
-    year, flights, days, ticks, columns: [...byDay].sort((a, b) => a[0] - b[0]),
+    year, flights, skies, days, ticks, columns: [...byDay].sort((a, b) => a[0] - b[0]),
     km: flights.reduce((sum, flight) => sum + flight.km, 0),
     minutes: flights.reduce((sum, flight) => sum + flight.durationMinutes, 0),
     countries: countriesIn(flights).size,
@@ -391,9 +414,13 @@ function yearStory(flown: Flight[], year: number | null, locale: Locale) {
   };
 }
 
+type Story = ReturnType<typeof yearStory>;
+type Bar = { flight: number; x: number; y: number; h: number; stops: Stops; suns: number[] };
+type SkyLayout = { left: number; full: number; top: number; height: number; width: number; bars: Bar[]; ticks: [number, string][] };
+
 // Flights placed on a run of days: a column per day, as tall as the time
 // aloft, coloured from take-off up to landing by the sky outside.
-function skyLine(ctx: Ctx, story: ReturnType<typeof yearStory>, top: number, height: number, width: number) {
+function skyLayout(story: Story, top: number, height: number, width: number): SkyLayout {
   const left = CARD.margin, full = CARD.width - CARD.margin * 2;
   const perDay = full / Math.max(1, story.days);
   // Fourteen hours fill the band, unless a day held more: then that day does,
@@ -401,93 +428,397 @@ function skyLine(ctx: Ctx, story: ReturnType<typeof yearStory>, top: number, hei
   const columns = story.columns.map(([, marks]) => marks);
   const tallest = Math.max(14 * 60, ...columns.map((marks) => marks.reduce((sum, mark) => sum + mark.minutes, 0)));
   const room = height - Math.max(0, ...columns.map((marks) => marks.length - 1));
-  ctx.fillStyle = white(0.1);
-  ctx.fillRect(left, top + height - 0.5, full, 0.5);
-  const bars: { x: number; y: number; h: number; stops: Stops }[] = [];
-  const suns: [number, number][] = [];
+  const bars: Bar[] = [];
   for (const [day, marks] of story.columns) {
     const x = left + (day + 0.5) * perDay - width / 2;
     let bottom = top + height;
     for (const mark of marks) {
       const h = Math.max(1.5, (mark.minutes / tallest) * room);
-      bars.push({ x, y: bottom - h, h, stops: mark.stops });
-      for (const at of mark.suns) suns.push([x + width / 2, bottom - at * h]);
+      bars.push({ flight: mark.flight, x, y: bottom - h, h, stops: mark.stops, suns: mark.suns });
       bottom -= h + 1;
     }
   }
+  return { left, full, top, height, width, bars, ticks: story.ticks.map(([day, label]) => [left + day * perDay, label]) };
+}
+
+// The line of days with each flight's mark.
+function skyLine(ctx: Ctx, sky: SkyLayout) {
+  skyAxis(ctx, sky);
+  skyMarks(ctx, sky, () => 1);
+  skyTicks(ctx, sky);
+}
+
+function skyAxis(ctx: Ctx, { left, full, top, height }: SkyLayout) {
+  ctx.fillStyle = white(0.1);
+  ctx.fillRect(left, top + height - 0.5, full, 0.5);
+}
+
+function skyTicks(ctx: Ctx, { ticks, top, height }: SkyLayout) {
+  for (const [x, label] of ticks) text(ctx, label, x, top + height + 4 + ascent(6.5), 6.5, 500, 0.42);
+}
+
+// Each flight's mark, `grown` of the way up from its take-off: all of it on a
+// card, as far as the flight has flown in a film. The glow is worked out
+// within `near` (the whole line unless said).
+function skyMarks(ctx: Ctx, sky: SkyLayout, grown: (flight: number) => number, near?: [number, number]) {
+  const { left, full, top, height, width } = sky;
+  const bars = sky.bars.flatMap((bar) => {
+    const share = Math.min(1, grown(bar.flight));
+    return share > 0 ? [{ ...bar, share, shown: bar.h * share }] : [];
+  });
+  if (!bars.length) return;
+  const [from, to] = near ?? [left, left + full];
   // Every mark's glow at once, in its own colours, laid over (not added) so
   // close marks don't pile their light up.
-  soft(ctx, [left, top - 4, full, height + 4], width * 1.5, 0.6, (l) => {
+  soft(ctx, [from, top - 4, to - from, height + 4], width * 1.5, 0.6, (l) => {
     for (const bar of bars) {
       l.fillStyle = gradient(l, bar.stops, 0, bar.y + bar.h, 0, bar.y);
-      l.fillRect(bar.x - width / 2, bar.y - 0.5, width * 2, bar.h + 1);
+      l.fillRect(bar.x - width / 2, bar.y + bar.h - bar.shown - 0.5, width * 2, bar.shown + 1);
     }
   });
   for (const bar of bars) {
     ctx.beginPath();
-    ctx.roundRect(bar.x, bar.y, width, bar.h, width / 2);
+    ctx.roundRect(bar.x, bar.y + bar.h - bar.shown, width, bar.shown, width / 2);
     ctx.fillStyle = gradient(ctx, bar.stops, 0, bar.y + bar.h, 0, bar.y);
     ctx.fill();
   }
-  for (const [x, y] of suns) sunDot(ctx, x, y, 1.3);
-  for (const [day, label] of story.ticks) text(ctx, label, left + day * perDay, top + height + 4 + ascent(6.5), 6.5, 500, 0.42);
+  for (const bar of bars) for (const at of bar.suns) if (at <= bar.share) sunDot(ctx, bar.x + width / 2, bar.y + bar.h - at * bar.h, 1.3);
 }
 
-async function yearCard(ctx: Ctx, request: { year: number | null }, context: CardContext) {
+type Figures = { count: number; km: number; minutes: number; cities: number; countries: number; sunrises: number; sunsets: number };
+
+// Everything the year card shows, placed once: drawn whole for the picture,
+// and frame by frame for the film.
+function yearScene(ctx: Ctx, year: number | null, context: CardContext) {
   const { locale, owner } = context;
-  const story = yearStory(context.flown, request.year, locale);
+  const story = yearStory(context.flown, year, locale);
   if (!story.flights.length) throw new Error("empty");
-  const top = request.year === null ? 124 : 104, bottom = 386;
+  const top = year === null ? 124 : 104, bottom = 386;
   const count = story.flights.length;
   const view = still(story.flights, owner, top, bottom, false, count < 12 ? 1.15 : count < 40 ? 0.95 : 0.75);
-  await drawStill(ctx, view);
-  fades(ctx, top, bottom);
   const wanted = story.places.slice(0, 14).flatMap((metro, index) => {
     const code = airportOfMetro(metro);
     const at = positionOf(code);
     return at ? [{ code: metro, text: cityOf(code, locale), at, strong: index < 6 }] : [];
   });
-  names(ctx, wanted, view, bands(top, bottom), 11);
-
   const a = story.first.replaceAll("-", "."), b = story.last.replaceAll("-", ".");
-  header(ctx, locale, story.first ? (request.year === null ? `${a} – ${b}` : `${a} – ${b.slice(5)}`) : "");
-  const title = request.year !== null ? String(request.year) : story.span[0] === story.span[1] ? String(story.span[0]) : `${story.span[0]} – ${story.span[1]}`;
-  const facts = [distance(story.km, locale),
-    t(locale, `${story.cities} 座城市`, `${story.cities} 座城市`, story.cities === 1 ? "1 city" : `${story.cities} cities`),
-    t(locale, `${story.countries} 个国家和地区`, `${story.countries} 個國家和地區`, story.countries === 1 ? "1 country" : `${story.countries} countries`)];
+  // Time in the air, and the sky it was spent in, above the footer.
+  const footerTop = FOOTER_BASELINE - ascent(6.5);
+  const lineTop = footerTop - 7 - 48;
+  const total: Figures = { count, km: story.km, minutes: story.minutes, cities: story.cities, countries: story.countries, sunrises: story.sunrises, sunsets: story.sunsets };
+  return {
+    year, locale, story, top, bottom, view, total,
+    names: placeNames(ctx, wanted, view, bands(top, bottom), 11),
+    span: story.first ? (year === null ? `${a} – ${b}` : `${a} – ${b.slice(5)}`) : "",
+    title: year !== null ? String(year) : story.span[0] === story.span[1] ? String(story.span[0]) : `${story.span[0]} – ${story.span[1]}`,
+    aloftBaseline: lineTop - 7 - (lineHeight(9) - ascent(9)),
+    sky: skyLayout(story, lineTop, 36, year === null ? 1 : 1.5),
+    note: t(locale, "每一道是一次飞行，颜色是当时窗外的天色", "每一道是一次飛行，顏色是當時窗外的天色", "Each mark is a flight, in the colours of the sky outside"),
+  };
+}
+
+type YearScene = ReturnType<typeof yearScene>;
+
+const yearFacts = ({ km, cities, countries }: Figures, locale: Locale) => [distance(km, locale),
+  t(locale, `${cities} 座城市`, `${cities} 座城市`, cities === 1 ? "1 city" : `${cities} cities`),
+  t(locale, `${countries} 个国家和地区`, `${countries} 個國家和地區`, countries === 1 ? "1 country" : `${countries} countries`)];
+
+// The year's title, and its figures beside or under it at `alpha` of their light.
+function yearWords(ctx: Ctx, scene: YearScene, figures: Figures, alpha = 1) {
+  const { locale } = scene;
+  const facts = yearFacts(figures, locale);
+  const count = figures.count;
   const flightsWord = t(locale, "次飞行", "次飛行", count === 1 ? "flight" : "flights");
   const headerBottom = HEADER.top + HEADER.height;
-  if (request.year !== null) {
+  if (scene.year !== null) {
     const titleTop = headerBottom + 8;
     const baseline = titleTop + ascent(60);
-    const titleWidth = text(ctx, title, CARD.margin, baseline, 60, 600, 0.95, "left", -1.8);
+    const titleWidth = text(ctx, scene.title, CARD.margin, baseline, 60, 600, 0.95, "left", -1.8);
+    if (alpha <= 0) return;
     const right = CARD.width - CARD.margin;
     const room = CARD.width - CARD.margin * 2 - titleWidth - 10;
-    const one = facts.join(" · ");
-    const lines = measure(ctx, one, 8.5, 500) <= room ? [one] : [`${facts[0]} · ${facts[1]}`, facts[2]];
+    // Broken where the year's own figures break, so counting up never moves a line.
+    const split = measure(ctx, yearFacts(scene.total, locale).join(" · "), 8.5, 500) > room;
+    const lines = split ? [`${facts[0]} · ${facts[1]}`, facts[2]] : [facts.join(" · ")];
+    ctx.save();
+    ctx.globalAlpha *= alpha;
     lines.forEach((line, index) => text(ctx, line, right, baseline - (lines.length - 1 - index) * lineHeight(8.5), 8.5, 500, 0.62, "right"));
     const countBaseline = baseline - (lines.length - 1) * lineHeight(8.5) - ascent(8.5) - 3 - (lineHeight(15) - ascent(15));
     const wordWidth = text(ctx, flightsWord, right, countBaseline, 10, 500, 0.62, "right");
     text(ctx, String(count), right - wordWidth - 4, countBaseline, 15, 600, 0.95, "right");
+    ctx.restore();
   } else {
     const titleTop = headerBottom + 10;
-    text(ctx, title, CARD.margin, titleTop + ascent(42), 42, 600, 0.95, "left", -1.2);
+    text(ctx, scene.title, CARD.margin, titleTop + ascent(42), 42, 600, 0.95, "left", -1.2);
+    if (alpha <= 0) return;
     const figuresTop = titleTop + lineHeight(42) + 4;
     const countBaseline = figuresTop + ascent(15);
+    ctx.save();
+    ctx.globalAlpha *= alpha;
     const countWidth = text(ctx, String(count), CARD.margin, countBaseline, 15, 600, 0.95);
     text(ctx, flightsWord, CARD.margin + countWidth + 4, countBaseline, 10, 500, 0.62);
     text(ctx, facts.join(" · "), CARD.margin, figuresTop + lineHeight(15) + 3 + ascent(8.5), 8.5, 500, 0.62);
+    ctx.restore();
+  }
+}
+
+function yearAloft(ctx: Ctx, scene: YearScene, figures: Figures, hoursAlpha = 1, sunsAlpha = 1) {
+  const { locale } = scene;
+  const hours = Math.round(figures.minutes / 60);
+  ctx.save();
+  if (hoursAlpha > 0) {
+    ctx.globalAlpha = hoursAlpha;
+    text(ctx, t(locale, `在天上 ${formatNumber(hours, locale)} 小时`, `在天上 ${formatNumber(hours, locale)} 小時`, hours === 1 ? "1 hour in the air" : `${formatNumber(hours, locale)} hours in the air`), CARD.margin, scene.aloftBaseline, 9, 600, 0.92);
+  }
+  if (sunsAlpha > 0) {
+    ctx.globalAlpha = sunsAlpha;
+    sunsRight(ctx, sunsLine(figures.sunrises, figures.sunsets, locale), scene.aloftBaseline);
+  }
+  ctx.restore();
+}
+
+async function drawYear(ctx: Ctx, scene: YearScene) {
+  await drawStill(ctx, scene.view);
+  fades(ctx, scene.top, scene.bottom);
+  drawNames(ctx, scene.names);
+  header(ctx, scene.locale, scene.span);
+  yearWords(ctx, scene, scene.total);
+  yearAloft(ctx, scene, scene.total);
+  skyLine(ctx, scene.sky);
+  footer(ctx, scene.note);
+}
+
+async function yearCard(ctx: Ctx, request: { year: number | null }, context: CardContext) {
+  await drawYear(ctx, yearScene(ctx, request.year, context));
+}
+
+// MARK: A year, as a film
+
+// The card coming together: from the bare globe, each flight draws from where
+// it left to where it landed in the order it was flown, its light gathered at
+// its head, then settles into the card's own quieter line; each airport and
+// city lights as it is first reached, each flight's mark on the line of days
+// rises with it, and the figures count up. It opens and ends on the finished
+// card, drawn exactly as the picture is.
+export async function yearFilm(ctx: Ctx, request: { year: number | null }, context: CardContext) {
+  await prepare();
+  const scene = yearScene(ctx, request.year, context);
+  const { story, view: still, locale } = scene;
+  const flights = story.flights;
+  const plan = planFilm(flights.map((flight) => flight.durationMinutes));
+  const legs = plan.legs;
+
+  const finished = layerLike(ctx);
+  await drawYear(finished.l as Ctx, scene);
+  const ground = layerLike(ctx);
+  const view = await drawGround(ground.l, still);
+  // The lines that have settled, as cores, and the globe with them lit; the
+  // lines still moving are drawn and lit on their own each frame.
+  const lines = layerLike(ctx), lit = layerLike(ctx), moving = layerLike(ctx);
+  for (const { l } of [lines, moving]) {
+    l.globalCompositeOperation = "lighter";
+    l.lineCap = "butt";
+    l.lineJoin = "round";
+  }
+  const traced = traceArcs(still, view);
+  const lineOf = new Map<number, Traced>();
+  let next = 0;
+  flights.forEach((flight, index) => { if (positionOf(flight.origin) && positionOf(flight.destination)) lineOf.set(index, traced[next++]); });
+  const level = levelOf(still);
+  const sigma = still.glow * 0.42, px = pixelsOf(ctx);
+  const color = toneColor(context.owner.tone);
+
+  // When each airport and city is first reached: where a flight leaves from
+  // as it takes off, where it goes as it lands.
+  const airports = new Map<string, number>(), cities = new Map<string, number>();
+  const reach = (map: Map<string, number>, key: string, at: number) => map.set(key, Math.min(map.get(key) ?? Infinity, at));
+  flights.forEach((flight, index) => {
+    reach(airports, flight.origin, legs[index].start);
+    reach(airports, flight.destination, legs[index].land);
+    reach(cities, metroOf(flight.origin), legs[index].start);
+    reach(cities, metroOf(flight.destination), legs[index].land);
+  });
+
+  const figuresAt = (time: number): Figures => {
+    let count = 0, km = 0, minutes = 0, sunrises = 0, sunsets = 0;
+    const metros = new Set<string>(), countries = new Set<string>();
+    flights.forEach((flight, index) => {
+      if (time < legs[index].start) return;
+      const share = flown(legs[index], time);
+      count++;
+      km += flight.km * share;
+      minutes += flight.durationMinutes * share;
+      metros.add(metroOf(flight.origin));
+      countries.add(countryOf(flight.origin));
+      if (share >= 1) { metros.add(metroOf(flight.destination)); countries.add(countryOf(flight.destination)); }
+      for (const event of story.skies[index]?.events ?? []) {
+        if (event.minute / Math.max(1, flight.durationMinutes) > share) continue;
+        if (event.kind === "sunrise") sunrises++; else sunsets++;
+      }
+    });
+    countries.delete("");
+    return { count, km, minutes, cities: metros.size, countries: countries.size, sunrises, sunsets };
+  };
+  // Lines that would read "0 hours", or have nothing to say yet, wait until they don't.
+  let hoursFrom = Infinity, sunsFrom = Infinity;
+  for (let index = 0; index < plan.frames && (hoursFrom === Infinity || sunsFrom === Infinity); index++) {
+    const time = index / FPS, figures = figuresAt(time);
+    if (hoursFrom === Infinity && Math.round(figures.minutes / 60) >= 1) hoursFrom = time;
+    if (sunsFrom === Infinity && figures.sunrises + figures.sunsets > 0) sunsFrom = time;
   }
 
-  // Time in the air, and the sky it was spent in.
-  const footerTop = FOOTER_BASELINE - ascent(6.5);
-  const lineTop = footerTop - 7 - 48;
-  const aloftBaseline = lineTop - 7 - (lineHeight(9) - ascent(9));
-  const hours = Math.round(story.minutes / 60);
-  text(ctx, t(locale, `在天上 ${formatNumber(hours, locale)} 小时`, `在天上 ${formatNumber(hours, locale)} 小時`, hours === 1 ? "1 hour in the air" : `${formatNumber(hours, locale)} hours in the air`), CARD.margin, aloftBaseline, 9, 600, 0.92);
-  sunsRight(ctx, sunsLine(story.sunrises, story.sunsets, locale), aloftBaseline);
-  skyLine(ctx, story, lineTop, 36, request.year === null ? 1 : 1.5);
-  footer(ctx, t(locale, "每一道是一次飞行，颜色是当时窗外的天色", "每一道是一次飛行，顏色是當時窗外的天色", "Each mark is a flight, in the colours of the sky outside"));
+  // The flight under way, named in the header's corner where the card gives
+  // its dates; just its day when they come too fast to read more.
+  const day = (date: string) => {
+    const [y, m, d] = date.split("-").map(Number);
+    if (locale === "en") return scene.year === null ? `${d} ${MONTHS[m - 1]} ${y}` : `${d} ${MONTHS[m - 1]}`;
+    return scene.year === null ? `${y}年${m}月${d}日` : `${m}月${d}日`;
+  };
+  const quick = plan.every < 0.45;
+  const captions = flights.map((flight) => quick ? day(flight.date) : `${day(flight.date)} · ${cityOf(flight.origin, locale)} → ${cityOf(flight.destination, locale)}`);
+
+  const blit = (source: HTMLCanvasElement, alpha: number) => {
+    if (alpha <= 0) return;
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(source, 0, 0);
+    ctx.restore();
+  };
+  const clear = (canvas: HTMLCanvasElement, l: CanvasRenderingContext2D) => {
+    l.save();
+    l.setTransform(1, 0, 0, 1, 0, 0);
+    l.clearRect(0, 0, canvas.width, canvas.height);
+    l.restore();
+  };
+  // What has stopped changing is drawn once into a layer of its own and laid
+  // down whole each frame; only what is still moving is drawn frame by frame.
+  const baked = new Set<number>();
+  let bakedAt = -Infinity;
+  const dotsOn = layerLike(ctx), namesOn = layerLike(ctx), marksOn = layerLike(ctx);
+  const kept = { dots: -1, names: -1, marks: -1 };
+  const keep = (part: keyof typeof kept, count: number, { layer, l }: { layer: HTMLCanvasElement; l: CanvasRenderingContext2D }, draw: (l: Ctx) => void) => {
+    if (count !== kept[part]) {
+      clear(layer, l);
+      draw(l as Ctx);
+      kept[part] = count;
+    }
+    blit(layer, 1);
+  };
+
+  const live = (time: number) => {
+    // Lines that have settled join the lit globe. With many flights a few
+    // are gathered first, since each time the whole globe's light is redone.
+    const settled = [...lineOf.keys()].filter((index) => !baked.has(index) && time >= legs[index].land + ARC_SETTLE);
+    const frame = Math.round(time * FPS);
+    if (bakedAt === -Infinity || (settled.length && (frame - bakedAt >= 3 || baked.size + settled.length === lineOf.size))) {
+      for (const index of settled) { strokeArc(lines.l, lineOf.get(index)!, level); baked.add(index); }
+      clear(lit.layer, lit.l);
+      lit.l.save();
+      lit.l.setTransform(1, 0, 0, 1, 0, 0);
+      lit.l.drawImage(ground.layer, 0, 0);
+      lit.l.restore();
+      if (baked.size) lightArcs(lit.l, lines.layer, still);
+      bakedAt = frame;
+    }
+    blit(lit.layer, 1);
+
+    // The lines in the air: bright toward their heads while they fly, then
+    // easing into the card's own light.
+    clear(moving.layer, moving.l);
+    const box = [Infinity, Infinity, -Infinity, -Infinity];
+    const heads: [[number, number], number][] = [];
+    for (const [index, line] of lineOf) {
+      const leg = legs[index];
+      if (time < leg.start || baked.has(index)) continue;
+      const along = flown(leg, time), calm = ease(ramp(time, leg.land, ARC_SETTLE));
+      const shape = (at: number) => {
+        const flying = (0.45 + 0.55 * Math.pow(at / Math.max(1e-6, along), 2)) * (0.22 + 0.78 * ease(ramp(at, 0, 0.1)));
+        return flying + (line.arc.alpha * level(at) - flying) * calm;
+      };
+      const drawn = strokeArc(moving.l, line, shape, along, 1);
+      if (drawn.box) {
+        box[0] = Math.min(box[0], drawn.box[0]); box[1] = Math.min(box[1], drawn.box[1]);
+        box[2] = Math.max(box[2], drawn.box[2]); box[3] = Math.max(box[3], drawn.box[3]);
+      }
+      if (drawn.head && calm < 1) heads.push([drawn.head, 1 - calm]);
+    }
+    if (box[0] <= box[2]) {
+      const margin = sigma * 4 + still.arcs[0].width + 2;
+      const x = Math.max(0, Math.floor((box[0] - margin) * px)), y = Math.max(0, Math.floor((box[1] - margin) * px));
+      const right = Math.min(moving.layer.width, Math.ceil((box[2] + margin) * px)), bottom = Math.min(moving.layer.height, Math.ceil((box[3] + margin) * px));
+      lightArcs(ctx, moving.layer, still, [x, y, right - x, bottom - y]);
+    }
+    for (const [[x, y], alpha] of heads) {
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      glow(ctx, () => { ctx.beginPath(); ctx.arc(x, y, 2.6, 0, Math.PI * 2); }, color, 3.5, 1);
+      ctx.beginPath();
+      ctx.arc(x, y, 1.1, 0, Math.PI * 2);
+      ctx.fillStyle = white(0.95);
+      ctx.fill();
+      ctx.restore();
+    }
+    // An airport comes on as a larger, fainter light drawing in to its size.
+    const lightOf = (spec: DotSpec) => ramp(time, airports.get(spec.code) ?? Infinity, 0.4);
+    keep("dots", still.dots.filter((spec) => lightOf(spec) >= 1).length, dotsOn, (l) => drawDots(l, still, view, (spec) => [lightOf(spec) >= 1 ? 1 : 0, 1]));
+    drawDots(ctx, still, view, (spec) => {
+      const share = lightOf(spec);
+      return share >= 1 ? [0, 1] : [Math.min(1, share * 4), 1 + 1.4 * Math.pow(1 - share, 2)];
+    });
+
+    fades(ctx, scene.top, scene.bottom);
+    const nameOf = (name: Placed) => ramp(time, cities.get(name.code) ?? Infinity, 0.4);
+    keep("names", scene.names.filter((name) => nameOf(name) >= 1).length, namesOn, (l) => drawNames(l, scene.names, (name) => nameOf(name) >= 1 ? 1 : 0));
+    drawNames(ctx, scene.names, (name) => nameOf(name) < 1 ? nameOf(name) : 0);
+
+    // The dates in the corner give way to the flight under way, and come
+    // back. One goes before the next comes: words of different lengths set
+    // to the same right edge would run into each other.
+    const into = ramp(time, legs[0].start, 0.4), back = ramp(time, plan.landed, 0.4);
+    header(ctx, locale, "");
+    headerRight(ctx, scene.span, 0.42 * (Math.max(0, 1 - 2 * into) + Math.max(0, 2 * back - 1)));
+    const under = Math.min(Math.max(0, 2 * into - 1), Math.max(0, 1 - 2 * back));
+    if (under > 0) {
+      let current = 0;
+      while (current + 1 < legs.length && legs[current + 1].start <= time) current++;
+      // A quick run of flights ticks over like a clock; a slower one fades.
+      const change = quick || current === 0 ? 1 : ramp(time, legs[current].start, 0.3);
+      if (change < 0.5) headerRight(ctx, captions[current - 1], 0.62 * under * (1 - 2 * change));
+      else headerRight(ctx, captions[current], 0.62 * under * (current === 0 || quick ? 1 : 2 * change - 1));
+    }
+
+    const figures = figuresAt(time);
+    yearWords(ctx, scene, figures, ramp(time, legs[0].start, 0.3));
+    yearAloft(ctx, scene, figures, ramp(time, hoursFrom, 0.3), ramp(time, sunsFrom, 0.3));
+
+    const sky = scene.sky;
+    skyAxis(ctx, sky);
+    keep("marks", flights.filter((_, index) => flown(legs[index], time) >= 1).length, marksOn, (l) => skyMarks(l, sky, (index) => flown(legs[index], time) >= 1 ? 1 : 0));
+    const rising = sky.bars.filter((bar) => { const share = flown(legs[bar.flight], time); return share > 0 && share < 1; });
+    if (rising.length) {
+      const xs = rising.map((bar) => bar.x);
+      skyMarks(ctx, sky, (index) => { const share = flown(legs[index], time); return share < 1 ? share : 0; }, [Math.min(...xs) - sky.width * 3, Math.max(...xs) + sky.width * 4]);
+    }
+    skyTicks(ctx, sky);
+    footer(ctx, scene.note);
+  };
+
+  return {
+    frames: plan.frames,
+    seconds: plan.total,
+    draw(index: number) {
+      const time = index / FPS;
+      if (time < plan.cover || time >= plan.finished) { blit(finished.layer, 1); return; }
+      live(time);
+      // Clearing to the bare globe at the start; at the end, the picture itself.
+      if (time < plan.unwound) blit(finished.layer, 1 - ease(ramp(time, plan.cover, plan.unwound - plan.cover)));
+      blit(finished.layer, ease(ramp(time, plan.finished - 0.25, 0.25)));
+    },
+    release() {
+      for (const { layer } of [finished, ground, lines, lit, moving, dotsOn, namesOn, marksOn]) layer.width = layer.height = 0;
+    },
+  };
 }
 
 // MARK: A trip
@@ -672,7 +1003,7 @@ async function carrierMark(ctx: Ctx, code: string, x: number, y: number, size: n
   image.src = `/airlines/${code}.webp`;
   await image.decode().catch(() => {});
   if (!image.naturalWidth) return;
-  const px = Math.round(size * CARD.scale);
+  const px = Math.round(size * pixelsOf(ctx));
   const tile = document.createElement("canvas");
   tile.width = tile.height = px;
   const c = tile.getContext("2d")!;
@@ -819,9 +1150,13 @@ async function flightCard(ctx: Ctx, flight: Flight, ordinal: number | null, cont
 
 // MARK: Printing
 
-export async function printCard(request: CardRequest, context: CardContext): Promise<Blob> {
+async function prepare() {
   await Promise.all([document.fonts?.ready, loadWorld()]);
   family = getComputedStyle(document.body).fontFamily || family;
+}
+
+export async function printCard(request: CardRequest, context: CardContext): Promise<Blob> {
+  await prepare();
   const canvas = document.createElement("canvas");
   canvas.width = CARD.width * CARD.scale;
   canvas.height = CARD.height * CARD.scale;

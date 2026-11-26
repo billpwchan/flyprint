@@ -26,6 +26,6 @@ NASA Visible Earth: https://visibleearth.nasa.gov/collection/1484/blue-marble
 程序不附带城市卫星图：服务器运行时向 EOX 取 Sentinel-2 cloudless 2024 的瓦片拼成（含经修改的 Copernicus Sentinel 2024 数据），按 CC BY-NC-SA 4.0 授权，只允许非商业使用，页面底部署名。商业部署须把 FLYPRINT_IMAGERY_UPSTREAM 换成自己有权使用的影像源，或取得 EOX 的商业许可。
 Sentinel-2 cloudless: https://s2maps.eu
 
-地球由 BSD-3-Clause 许可的 MapLibre GL JS 渲染。年度卡片在浏览器本地用 Canvas 绘制。依赖各自的许可不因本项目的 MIT 许可而改变。
+地球由 BSD-3-Clause 许可的 MapLibre GL JS 渲染。年度卡片在浏览器本地用 Canvas 绘制；年度短片由浏览器的 WebCodecs 编码，再用 MIT 许可的 mp4-muxer（Copyright (c) 2023 Vanilagy）封装成 MP4。依赖各自的许可不因本项目的 MIT 许可而改变。
 
 README 截图与封面航线使用合成示例；航班号、日期、机型组合不表示实际执飞事实。docs/assets 中拍到城市卫星图的截图（目前是 overview、overview-en、years、trip-en 与 mobile）不在 MIT 许可之内，按 CC BY-NC-SA 4.0 授权：Sentinel-2 cloudless 2024 © EOX IT Services GmbH（含经修改的 Copernicus Sentinel 2024 数据）。矢量封面使用相同的公开地图数据与项目 W 路径标记。

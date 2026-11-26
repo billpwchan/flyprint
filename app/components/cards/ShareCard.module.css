@@ -103,13 +103,24 @@
   box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.1), 0 24px 60px rgba(0, 0, 0, 0.55);
 }
 
-.frame img {
+.frame img,
+.frame video {
   display: block;
   width: 100%;
   height: 100%;
   -webkit-touch-callout: default;
   user-select: auto;
   animation: cardIn 360ms var(--ease) both;
+}
+
+.frame video {
+  object-fit: cover;
+}
+
+/* The picture waits under the film while the film is made. */
+.frame .behind {
+  opacity: 0.28;
+  transition: opacity 240ms var(--ease);
 }
 
 .state {
@@ -120,6 +131,24 @@
   margin: 0;
   font-size: 13px;
   color: var(--ink-3);
+}
+
+.over {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
+}
+
+/* How much of the film is made, as a hairline along the card's foot. */
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--ink);
+  transform-origin: left;
+  transition: transform 120ms linear;
 }
 
 .making::after {
@@ -137,6 +166,49 @@
   justify-items: center;
   gap: 10px;
   width: min(100%, 360px);
+}
+
+/* Picture or film: two words, the one chosen lit and marked with a dot. */
+.kinds {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  height: 34px;
+}
+
+.kinds button {
+  position: relative;
+  min-width: 44px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 140ms var(--ease);
+}
+
+.kinds button:hover {
+  color: var(--ink-2);
+}
+
+.kinds button[aria-pressed="true"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.kinds button[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 3px;
+  height: 3px;
+  margin-left: -1.5px;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 .buttons {
@@ -196,6 +268,8 @@
   margin: 0;
   font-size: 14px;
   color: var(--ink-2);
+  text-align: center;
+  text-wrap: balance;
 }
 
 @keyframes sheetIn {
@@ -212,5 +286,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sheet, .frame img, .making::after { animation: none; }
+  .sheet, .frame img, .frame video, .making::after { animation: none; }
+  .progress { transition: none; }
 }
