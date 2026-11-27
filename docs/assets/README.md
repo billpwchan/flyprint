@@ -8,6 +8,8 @@
 
 英文首页（`README.md`）用同一份合成档案的英文界面：`overview-en.webp`（1440×900 概览）、`trip-en.webp`（DEMO-271 旅程：阿姆斯特丹经迪拜到马累，地球按起飞时的太阳打光）、`footprint-en.webp`（足迹页的小时格）、`card-year-en.webp`（2025 年卡片）与 `card-flight-en.webp`（UA1158 航班卡片）。卡片是应用在浏览器里生成的 JPEG，截取时把 `FLYPRINT_ORIGIN` 设为公开地址，卡片底部才印出正式网址。
 
+`year-film-en.webp` 与 `year-film-zh.webp` 是年度视频：在公开站点以未登录访客打开示例旅客 Lin 的 2023 年卡片，切到「视频」后下载的 MP4，按 15 fps、480×640 用 `img2webp -lossy -q 72` 转成动画 WebP，各约 0.6 MB。卡片底部印的是正式网址。
+
 截图反映当前产品；封面是项目视觉标识，不应当作界面截图。
 
 矢量封面可用 `node scripts/build-readme-hero.mjs` 重新生成。社交预览由英文概览截图与标志在浏览器里排版后截取。

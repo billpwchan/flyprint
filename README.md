@@ -22,11 +22,14 @@ Flighty is about your next flight. Airline apps know only the flights they sold 
 
 You can [try it on your own flights](https://flyprint.billpwchan.art/import?ref=gh-readme) without an account. Your map is drawn from the first upload; sign up to keep it, or it is deleted after 7 days.
 
+<p align="center"><img src="docs/assets/year-film-en.webp" width="360" alt="The year film: the sample traveller's 2023 flights cross the night globe one by one in the order they were flown, the counts climb, and it ends on the year card" /></p>
+<p align="center"><sub>Your year as a 14-second film, made in your browser and saved as an MP4. This is Lin's 2023 from the live demo.</sub></p>
+
 ## What you get
 
 - **One globe, always there.** It is the Earth as photographed, NASA's Blue Marble by day and city lights by night, lit by the sun where it really is. Pick a year, open a trip or search for a flight, and the globe turns to it and draws the routes in order. It never reloads between pages.
 - **Trips, worked out.** Flyprint finds where you lived in each period from where you spent your nights. It then chains flights into trips and names each one after the place you stayed longest. Moves abroad, stopovers and multi-city trips come out right.
-- **Cards worth sharing.** A year, a trip or a single flight becomes a 3:4 image (1440×1920), drawn on your device. Each card shows the globe at night with real city lights and your routes. The year card also shows the colour of the sky outside the window for every hour you were in the air.
+- **Cards worth sharing.** A year, a trip or a single flight becomes a 3:4 image (1440×1920), drawn on your device. Each card shows the globe at night with real city lights and your routes. The year card also shows the colour of the sky outside the window for every hour you were in the air, and it can be saved as a 14-second film in which each flight crosses the globe in the order you flew it.
 - **Two people, one map.** Link two accounts to get a page for the flights you took together. It also shows who got where first and where you will meet next.
 - **Details you can look at.** These include:
   - aircraft side profiles drawn to scale;
